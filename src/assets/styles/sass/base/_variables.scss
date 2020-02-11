@@ -12,3 +12,10 @@ $secondaryFontColor: color.change(
    $lightness: 65%
 );
 $mainOutlineColor: color.change($mainColor, $saturation: 10%, $lightness: 90%);
+
+$xXSmall: 320px;
+$xSmall: 480px;
+$small: 600px;
+$medium: 768px;
+$large: 992px;
+$xLarge: 1200px;
