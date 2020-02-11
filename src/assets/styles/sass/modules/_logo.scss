@@ -1,0 +1,24 @@
+.logo {
+   width: 150px;
+   padding-left: 7px;
+
+   @include atSmall {
+      width: 200px;
+   }
+
+   @include atMedium {
+      width: 250px;
+   }
+
+   &__subtext-bg {
+      fill: $mainColor;
+   }
+
+   &__subtext {
+      fill: #fff;
+   }
+
+   &__main-text {
+      fill: $mainColor;
+   }
+}
