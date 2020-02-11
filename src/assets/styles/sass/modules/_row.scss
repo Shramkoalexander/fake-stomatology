@@ -1,0 +1,60 @@
+@mixin col12($colSize) {
+   @for $i from 1 through 12 {
+      &__col-#{$colSize}-#{$i} {
+         display: block;
+         width: ($i * 100%)/12;
+         @content;
+      }
+   }
+   &__col-#{$colSize}-none {
+      display: none;
+   }
+}
+
+.row {
+   display: flex;
+   $gutter: 30px;
+   $wrapBottomMargin: 2.5rem;
+
+   &--wrap {
+      flex-wrap: wrap;
+   }
+
+   &--wrap-b-margin {
+      margin-bottom: -$wrapBottomMargin;
+   }
+
+   &--wrap-b-margin > * {
+      margin-bottom: $wrapBottomMargin;
+   }
+
+   &--gutters {
+      margin-right: -$gutter;
+   }
+
+   &--gutters > * {
+      padding-right: $gutter;
+   }
+
+   @include col12('smallest');
+
+   @include atSmall {
+      @include col12('S');
+   }
+
+   @include atMedium {
+      @include col12('M');
+   }
+
+   @include atLarge {
+      @include col12('L');
+   }
+
+   @include atXLarge {
+      @include col12('XL');
+   }
+
+   &--content-v-centered {
+      align-items: center;
+   }
+}
