@@ -9,7 +9,12 @@ img {
 
 a {
    text-decoration: none;
-   color: $mainFontColor;
+   color: $mainColor;
+   transition: all $mainHoverTransitionTime;
+
+   &:hover {
+      color: getDarkerColor($mainColor);
+   }
 }
 
 body {
