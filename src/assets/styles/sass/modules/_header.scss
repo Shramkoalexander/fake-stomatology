@@ -1,0 +1,101 @@
+.header {
+   position: relative;
+   min-width: $xXSmall;
+   box-shadow: 0 0 33px rgba($mainFontColor, 0.15);
+
+   &__top-section {
+      padding: {
+         top: 0.8rem;
+         bottom: 0.8rem;
+      }
+
+      border: {
+         bottom: 1px solid $mainOutlineColor;
+      }
+
+      @include atSmall {
+         border: none;
+      }
+   }
+
+   &__menu-button {
+      background-color: #fff;
+      border: none;
+      padding: 0.3rem 0.6rem;
+      outline: none;
+      color: $mainColor;
+      font-size: $largeFontSize;
+      cursor: pointer;
+
+      &:hover {
+         color: getDarkerColor($mainColor);
+      }
+   }
+
+   &__logo {
+      text-align: center;
+
+      @include atSmall {
+         text-align: left;
+      }
+   }
+
+   &__our-clinics {
+      text-align: right;
+      font-size: $smallFontSize;
+
+      @include atXLarge {
+         text-align: center;
+      }
+   }
+
+   &__clinics-count {
+      font-weight: 500;
+   }
+
+   &__clinics-pin-icon {
+      position: relative;
+      top: -0.06rem;
+   }
+
+   &__phone-icon {
+      text-align: right;
+      font-size: $largeFontSize;
+   }
+
+   &__top-clbk-btn {
+      text-align: right;
+   }
+
+   &__nav-section {
+      display: none;
+      padding: 0;
+      overflow-x: hidden;
+
+      @include atSmall {
+         display: block;
+         border: {
+            top: 1px solid $mainOutlineColor;
+         }
+      }
+
+      @include atXLarge {
+         padding: {
+            top: 0.8rem;
+            bottom: 0.8rem;
+         }
+      }
+   }
+
+   &__navbar-clbk-btn {
+      text-align: right;
+   }
+
+   &__submenu-section {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+   }
+}
