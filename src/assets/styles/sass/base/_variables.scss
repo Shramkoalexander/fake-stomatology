@@ -1,1 +1,14 @@
-$mainFontColor: #000;
+@use 'sass:color';
+
+@function getDarkerColor($color, $decreaseVal: 20%) {
+   @return color.scale($color, $lightness: -$decreaseVal);
+}
+
+$mainColor: #1d7cf8;
+$mainFontColor: color.change($mainColor, $lightness: 10%);
+$secondaryFontColor: color.change(
+   $mainColor,
+   $saturation: 10%,
+   $lightness: 65%
+);
+$mainOutlineColor: color.change($mainColor, $saturation: 10%, $lightness: 90%);
