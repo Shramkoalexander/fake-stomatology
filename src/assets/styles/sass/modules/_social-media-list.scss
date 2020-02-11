@@ -1,0 +1,48 @@
+@use "sass:color";
+
+@mixin defineSpecSmItem($smName, $smColor) {
+   &--#{$smName} {
+      transition: all $mainHoverTransitionTime;
+      background-color: $smColor;
+
+      &:hover {
+         background-color: getDarkerColor($smColor);
+      }
+   }
+}
+
+.social-media-list {
+   display: flex;
+   justify-content: center;
+   padding: 0;
+   margin: 0;
+
+   &__item {
+      list-style: none;
+      width: 2.2rem;
+      height: 2.2rem;
+      font-size: $mainFontSize;
+      margin-right: 0.4rem;
+      border-radius: 50%;
+      color: #fff;
+
+      &:last-child {
+         margin-right: 0;
+      }
+
+      @include defineSpecSmItem('inst', $mainColor);
+      @include defineSpecSmItem('vk', $mainColor);
+      @include defineSpecSmItem('fb', $mainColor);
+      @include defineSpecSmItem('odnkl', $mainColor);
+      @include defineSpecSmItem('ytb', $mainColor);
+   }
+
+   &__item a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+   }
+}
