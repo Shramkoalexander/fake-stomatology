@@ -1,0 +1,21 @@
+.wrapper {
+   min-width: $xXSmall;
+   max-width: $xLarge;
+
+   padding: {
+      left: 20px;
+      right: 20px;
+   }
+
+   @include atSmall {
+      padding: {
+         left: 50px;
+         right: 50px;
+      }
+   }
+
+   margin: {
+      left: auto;
+      right: auto;
+   }
+}
