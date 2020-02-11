@@ -1,0 +1,19 @@
+.btn {
+   transition: all $mainHoverTransitionTime;
+   padding: 0.7rem 1.5rem;
+   background-color: $mainColor;
+   border-radius: 25px;
+   color: white;
+   text-transform: uppercase;
+   font-size: $smallFontSize;
+   display: inline-block;
+   white-space: nowrap;
+   outline: none;
+   border: none;
+   cursor: pointer;
+
+   &:hover {
+      color: white;
+      background-color: getDarkerColor($mainColor);
+   }
+}
