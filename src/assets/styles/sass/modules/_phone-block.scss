@@ -1,0 +1,24 @@
+.phone-block {
+   text-align: right;
+
+   &__comment {
+      color: $secondaryFontColor;
+      font-size: $smallFontSize;
+      white-space: nowrap;
+      margin-bottom: 0.2rem;
+   }
+
+   &__number {
+      font-size: $largeFontSize;
+      font-weight: 600;
+
+      a {
+         color: $mainFontColor;
+         white-space: nowrap;
+
+         &:hover {
+            color: $mainColor;
+         }
+      }
+   }
+}
