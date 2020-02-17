@@ -3,7 +3,7 @@
    padding: 0.7rem 1.5rem;
    background-color: $mainColor;
    border-radius: 25px;
-   color: white;
+   color: #fff;
    text-transform: uppercase;
    font-size: $smallFontSize;
    display: inline-block;
@@ -13,7 +13,7 @@
    cursor: pointer;
 
    &:hover {
-      color: white;
+      color: #fff;
       background-color: getDarkerColor($mainColor);
    }
 }
