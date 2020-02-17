@@ -1,24 +1,22 @@
+@mixin setThemeColors($themeName, $subTxtBgColor, $subTxtColor, $mainTxtColor) {
+   $themeSelector: if($themeName, '&--' + $themeName, null);
+   #{$themeSelector} &__subtext-bg {
+      fill: $subTxtBgColor;
+   }
+
+   #{$themeSelector} &__subtext {
+      fill: $subTxtColor;
+   }
+
+   #{$themeSelector} &__main-text {
+      fill: $mainTxtColor;
+   }
+}
+
 .logo {
-   width: 150px;
+   width: 100%;
    padding-left: 7px;
 
-   @include atSmall {
-      width: 200px;
-   }
-
-   @include atMedium {
-      width: 250px;
-   }
-
-   &__subtext-bg {
-      fill: $mainColor;
-   }
-
-   &__subtext {
-      fill: #fff;
-   }
-
-   &__main-text {
-      fill: $mainColor;
-   }
+   @include setThemeColors(null, $mainColor, #fff, $mainColor);
+   @include setThemeColors('light', #fff, $mainColor, #fff);
 }
