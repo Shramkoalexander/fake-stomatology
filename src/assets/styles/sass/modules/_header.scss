@@ -34,9 +34,21 @@
 
    &__logo {
       text-align: center;
+      width: 150px;
+
+      margin: {
+         left: auto;
+         right: auto;
+      }
 
       @include atSmall {
          text-align: left;
+         margin-left: 0;
+         width: 200px;
+      }
+
+      @include atMedium {
+         width: 250px;
       }
    }
 
