@@ -4,6 +4,10 @@
    @return color.scale($color, $lightness: -$decreaseVal);
 }
 
+@function getLighterColor($color, $increaseVal: 20%) {
+   @return color.scale($color, $lightness: $increaseVal);
+}
+
 $mainColor: #1d7cf8;
 $accentColor: #ffc909;
 $mainFontColor: color.change($mainColor, $lightness: 10%);
