@@ -1,24 +1,40 @@
-.phone-block {
-   text-align: right;
-
-   &__comment {
-      color: $secondaryFontColor;
+@mixin setThemeColors(
+   $themeName,
+   $commentColor,
+   $numberColor,
+   $numberHoverColor
+) {
+   $themeSelector: if($themeName, '&--' + $themeName, null);
+   #{$themeSelector} &__comment {
+      color: $commentColor;
       font-size: $smallFontSize;
       white-space: nowrap;
       margin-bottom: 0.2rem;
    }
 
-   &__number {
+   #{$themeSelector} &__number {
       font-size: $largeFontSize;
       font-weight: 600;
 
       a {
-         color: $mainFontColor;
+         color: $numberColor;
          white-space: nowrap;
 
          &:hover {
-            color: $mainColor;
+            color: $numberHoverColor;
          }
       }
    }
+}
+
+.phone-block {
+   text-align: right;
+
+   @include setThemeColors(
+      null,
+      $secondaryFontColor,
+      $mainFontColor,
+      $mainColor
+   );
+   @include setThemeColors('light', #fff, #fff, rgba(#fff, 0.9));
 }
