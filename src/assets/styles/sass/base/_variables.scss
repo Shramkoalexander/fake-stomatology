@@ -5,6 +5,7 @@
 }
 
 $mainColor: #1d7cf8;
+$accentColor: #ffc909;
 $mainFontColor: color.change($mainColor, $lightness: 10%);
 $secondaryFontColor: color.change(
    $mainColor,
