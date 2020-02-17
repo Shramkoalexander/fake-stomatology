@@ -16,4 +16,23 @@
       color: #fff;
       background-color: getDarkerColor($mainColor);
    }
+
+   &--white {
+      color: $mainFontColor;
+      background-color: #fff;
+      &:hover {
+         color: $mainFontColor;
+         background-color: #fff;
+         box-shadow: 0 5px 5px rgba($mainFontColor, 0.3);
+      }
+   }
+
+   &--cta {
+      background-color: $accentColor;
+
+      &:hover {
+         background-color: $accentColor;
+         box-shadow: 0 5px 5px rgba($mainFontColor, 0.3);
+      }
+   }
 }
