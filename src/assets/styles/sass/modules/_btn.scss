@@ -27,13 +27,11 @@
       }
    }
 
-   &--cta {
+   &--cta-shadowed {
       background-color: $accentColor;
 
       &:hover {
-         background-color: $accentColor;
-         box-shadow: 0 5px 5px rgba($mainFontColor, 0.3);
-      }
+   }
 
    &--bold {
       font-weight: 600;
