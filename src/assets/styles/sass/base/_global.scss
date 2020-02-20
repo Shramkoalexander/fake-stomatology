@@ -18,6 +18,7 @@ a {
 }
 
 body {
+   min-width: $XXSmall;
    font-family: 'Rubik', sans-serif;
    color: $mainFontColor;
    font-size: $mainFontSize;
