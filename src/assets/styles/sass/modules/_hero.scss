@@ -1,0 +1,122 @@
+.hero {
+   background-color: $mainColor;
+   position: relative;
+   background-image: url('../images/circle.svg');
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   background-size: 480px;
+
+   @include atMedium {
+      background-position: 110% 50%;
+   }
+
+   @include atMedium(90px) {
+      background-image: url('../images/dentist.png');
+      background-position: 110% bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+   }
+
+   @include atLarge {
+      background-position: 90% bottom;
+   }
+
+   @include atXLarge {
+      background-image: none;
+   }
+
+   &__content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      padding: {
+         top: 2rem;
+         bottom: 2rem;
+      }
+
+      @include atSmall {
+         padding: {
+            top: 4rem;
+            bottom: 4rem;
+         }
+      }
+
+      @include atMedium {
+         height: 500px;
+         justify-content: flex-start;
+      }
+
+      @include atXLarge {
+         background-image: url('../images/dentist.png');
+         background-position: 90% bottom;
+         background-repeat: no-repeat;
+         background-size: contain;
+      }
+   }
+
+   &__ad {
+      background-color: rgba(#000, 0.1);
+      padding: 2rem;
+      border-radius: 2rem;
+      display: inline-block;
+      width: 100%;
+
+      @include atSmall {
+         width: 30rem;
+      }
+
+      @include atLarge {
+         width: 33rem;
+      }
+
+      @include atXLarge {
+         margin-left: 6rem;
+      }
+   }
+
+   &__ad-title {
+      color: #fff;
+      font-size: 2rem;
+      text-align: center;
+
+      margin: {
+         top: 0;
+         bottom: 2rem;
+      }
+
+      @include atSmall {
+         font-size: 2.5rem;
+         text-align: left;
+      }
+   }
+
+   &__ad-text {
+      color: #fff;
+      margin-bottom: 2rem;
+      max-width: 50ch;
+   }
+
+   &__ad-btn-block {
+      display: flex;
+      flex-wrap: wrap;
+
+      margin: {
+         bottom: -1rem;
+         right: -1rem;
+      }
+   }
+
+   &__ad-btn {
+      margin: {
+         right: 1rem;
+         bottom: 1rem;
+      }
+
+      width: 100%;
+
+      @include atSmall {
+         width: auto;
+      }
+   }
+}
