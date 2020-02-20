@@ -10,21 +10,25 @@
    display: inline-block;
    white-space: nowrap;
    outline: none;
-   border: none;
+   border: 1px solid $btnColor;
    cursor: pointer;
 
    &:hover {
       color: #fff;
       background-color: getDarkerColor($btnColor);
+      border-color: getDarkerColor($btnColor);
    }
 
    &--white {
       $btnColor: #fff;
       color: $mainFontColor;
       background-color: $btnColor;
+      border: 1px solid $btnColor;
+
       &:hover {
          color: $mainFontColor;
          background-color: #fff;
+         border-color: $btnColor;
          box-shadow: 0 5px 5px rgba($mainFontColor, 0.3);
       }
    }
