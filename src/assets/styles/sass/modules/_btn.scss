@@ -2,7 +2,7 @@
    $btnColor: $mainColor;
    transition: all $mainHoverTransitionTime;
    padding: 0.7rem 1.5rem;
-   background-color: $mainColor;
+   background-color: $btnColor;
    border-radius: 25px;
    color: #fff;
    text-transform: uppercase;
@@ -15,13 +15,13 @@
 
    &:hover {
       color: #fff;
-      background-color: getDarkerColor($mainColor);
+      background-color: getDarkerColor($btnColor);
    }
 
    &--white {
       $btnColor: #fff;
       color: $mainFontColor;
-      background-color: #fff;
+      background-color: $btnColor;
       &:hover {
          color: $mainFontColor;
          background-color: #fff;
