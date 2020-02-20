@@ -1,4 +1,5 @@
 .btn {
+   $btnColor: $mainColor;
    transition: all $mainHoverTransitionTime;
    padding: 0.7rem 1.5rem;
    background-color: $mainColor;
@@ -18,6 +19,7 @@
    }
 
    &--white {
+      $btnColor: #fff;
       color: $mainFontColor;
       background-color: #fff;
       &:hover {
@@ -28,7 +30,7 @@
    }
 
    &--cta-shadowed {
-      background-color: $accentColor;
+      $btnColor: $accentColor;
 
       &:hover {
    }
