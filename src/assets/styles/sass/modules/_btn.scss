@@ -46,8 +46,15 @@
 
    &--cta-shadowed {
       $btnColor: $accentColor;
+      background-color: $btnColor;
+      border-color: $btnColor;
+      box-shadow: 0 5px 5px rgba($mainFontColor, 0.3);
 
       &:hover {
+         background-color: getLighterColor($btnColor);
+         border-color: getLighterColor($btnColor);
+         box-shadow: 0 8px 5px rgba($mainFontColor, 0.3);
+      }
    }
 
    &--bold {
