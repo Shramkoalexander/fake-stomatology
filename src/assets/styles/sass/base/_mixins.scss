@@ -1,35 +1,35 @@
-@mixin atXSmall {
-   @media (min-width: $xXSmall) {
+@mixin atXXSmall($adjustment: null) {
+   @media (min-width: $xXSmall + $adjustment) {
       @content;
    }
 }
 
-@mixin atXXSmall {
-   @media (min-width: $xSmall) {
+@mixin atXSmall($adjustment: null) {
+   @media (min-width: $xSmall + $adjustment) {
       @content;
    }
 }
 
-@mixin atSmall {
-   @media (min-width: $small) {
+@mixin atSmall($adjustment: null) {
+   @media (min-width: $small + $adjustment) {
       @content;
    }
 }
 
-@mixin atMedium {
-   @media (min-width: $medium) {
+@mixin atMedium($adjustment: null) {
+   @media (min-width: $medium + $adjustment) {
       @content;
    }
 }
 
-@mixin atLarge {
-   @media (min-width: $large) {
+@mixin atLarge($adjustment: null) {
+   @media (min-width: $large + $adjustment) {
       @content;
    }
 }
 
-@mixin atXLarge {
-   @media (min-width: $xLarge) {
+@mixin atXLarge($adjustment: null) {
+   @media (min-width: $xLarge + $adjustment) {
       @content;
    }
 }
