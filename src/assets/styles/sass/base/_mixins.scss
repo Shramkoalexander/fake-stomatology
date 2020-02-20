@@ -1,11 +1,11 @@
 @mixin atXXSmall($adjustment: null) {
-   @media (min-width: $xXSmall + $adjustment) {
+   @media (min-width: $XXSmall + $adjustment) {
       @content;
    }
 }
 
 @mixin atXSmall($adjustment: null) {
-   @media (min-width: $xSmall + $adjustment) {
+   @media (min-width: $XSmall + $adjustment) {
       @content;
    }
 }
@@ -29,7 +29,7 @@
 }
 
 @mixin atXLarge($adjustment: null) {
-   @media (min-width: $xLarge + $adjustment) {
+   @media (min-width: $XLarge + $adjustment) {
       @content;
    }
 }
