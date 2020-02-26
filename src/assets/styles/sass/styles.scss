@@ -1,8 +1,11 @@
-@import 'vendors/vendors';
 @import 'base/variables';
+@import 'vendors/vendors';
 @import 'base/mixins';
 @import 'base/global';
+@import 'base/breakpoints';
 @import 'modules/wrapper';
+@import 'modules/page-section';
+@import 'modules/heading-block';
 @import 'modules/row';
 @import 'modules/logo';
 @import 'modules/btn';
@@ -12,4 +15,5 @@
 @import 'modules/main-menu';
 @import 'modules/social-media-list';
 @import 'modules/hero';
+@import 'modules/team-section';
 @import 'modules/footer';
