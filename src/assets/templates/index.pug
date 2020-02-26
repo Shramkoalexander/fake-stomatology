@@ -18,5 +18,32 @@ block content
                .hero__ad-btn-block
                   button.hero__ad-btn.btn.btn--cta-shadowed.btn--bold Записаться на прием
                   button.hero__ad-btn.btn.btn--outlined-white Узнать цены
+   .team-section.page-section
+      .wrapper
+         .heading-block 
+            h1.heading-block__title Лучшая команда врачей
+            .heading-block__subtitle Главная гордость нашей клиники – это команда профессионалов
+         .team-section__team-members-block
+            .glide.glide--team-members
+               .glide__track(data-glide-el='track')
+                  .glide__slides
+                     each member in teamMembers
+                        .glide__slide 
+                           .team-section__team-member
+                              .team-section__member-portrait
+                                 img(
+                                    src=`../assets/images/team/${member.imgName}.png`,
+                                    alt='Портрет врача'
+                                 )
+                              .team-section__member-content
+                                 .team-section__member-fullname: a(href='#') #[span.team-section__member-surname= member.surName] #[span.team-section__name-n-patronymic= member.namePatronymic]
+                                 .team-section__member-descr= member.descr
+                                 .team-section__member-experience #[span Стаж:] #{member.experience}
+                              .team-section__show-details-block 
+                                 a.btn Подробнее о враче
+               .glide__arrows(data-glide-el='controls')
+                  button.glide__arrow.glide__arrow--left(data-glide-dir='<') #[i.fas.fa-chevron-left]
+                  button.glide__arrow.glide__arrow--right(data-glide-dir='>') #[i.fas.fa-chevron-right]
+
 block bottomScripts
    script(src='./assets/scripts/js/bundle.js')
