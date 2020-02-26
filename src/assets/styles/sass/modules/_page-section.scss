@@ -1,0 +1,13 @@
+.page-section {
+   padding: {
+      top: 3rem;
+      bottom: 3rem;
+   }
+
+   @include atSmall {
+      padding: {
+         top: 6rem;
+         bottom: 6rem;
+      }
+   }
+}
