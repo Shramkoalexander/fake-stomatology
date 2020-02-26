@@ -1,0 +1,134 @@
+.team-section {
+   &__team-members-block {
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+
+      @include atXSmall {
+         width: 22rem;
+      }
+
+      @include atSmall {
+         width: 25rem;
+      }
+
+      @include atMedium {
+         width: 40rem;
+      }
+
+      @include atLarge {
+         width: 100%;
+      }
+   }
+
+   &__team-member {
+      border: 1px solid rgba($color: #ccc, $alpha: 0.5);
+      border-radius: 1rem;
+      height: 100%;
+      transition: all $mainHoverTransitionTime;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+         box-shadow: 0px 5px 15px rgba($color: $secondaryFontColor, $alpha: 0.3);
+      }
+   }
+
+   &__member-portrait {
+      margin-bottom: 1rem;
+
+      img {
+         width: 300px;
+         display: block;
+
+         margin: {
+            left: auto;
+            right: auto;
+         }
+
+         @include atMedium {
+            width: 250px;
+         }
+
+         @include atLarge {
+            width: 200px;
+         }
+      }
+   }
+
+   &__member-content {
+      display: flex;
+      flex-direction: column;
+      color: $mainFontColor;
+   }
+
+   &__member-fullname {
+      margin-bottom: 1rem;
+
+      a {
+         color: $mainFontColor;
+
+         &:hover {
+            color: $mainColor;
+         }
+      }
+   }
+
+   &__member-surname {
+      line-height: 2rem;
+      font-size: 2rem;
+      display: block;
+
+      @include atMedium {
+         font-size: 1.6em;
+      }
+   }
+
+   &__name-n-patronymic {
+      font-size: 1.5rem;
+      position: relative;
+
+      @include atMedium {
+         font-size: 1.3em;
+      }
+   }
+
+   &__member-descr {
+      color: $secondaryFontColor;
+      border-bottom: 1px solid rgba($color: #ccc, $alpha: 0.5);
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      font-size: $smallFontSize;
+   }
+
+   &__member-experience {
+      span {
+         font-weight: 500;
+      }
+   }
+
+   &__show-details-block {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 0;
+      width: 100%;
+      display: flex;
+      opacity: 0;
+      align-items: center;
+      justify-content: center;
+
+      background-image: linear-gradient(
+         transparent,
+         rgba($color: #fff, $alpha: 0.9) 30%
+      );
+
+      transition: all $mainHoverTransitionTime;
+   }
+
+   &__team-member:hover &__show-details-block {
+      opacity: 1;
+      height: 30%;
+   }
+}
