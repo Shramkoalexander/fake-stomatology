@@ -1,0 +1,67 @@
+@import 'variables';
+
+.#{$glide-class} {
+   $this: &;
+
+   $se: $glide-element-separator;
+   $sm: $glide-modifier-separator;
+
+   &--team-members {
+      .#{$glide-class}#{$se}slide {
+         height: auto;
+         padding: 1rem;
+      }
+
+      .#{$glide-class}#{$se}track {
+         margin-bottom: 1rem;
+      }
+
+      .#{$glide-class}#{$se}arrows {
+         text-align: center;
+      }
+
+      .#{$glide-class}#{$se}arrow {
+         color: $mainColor;
+         text-transform: uppercase;
+         padding: 0.6rem 0.8rem;
+         background-color: transparent;
+         border: 2px solid rgba($color: $mainColor, $alpha: 0.2);
+         border-radius: 0.3rem;
+         font-size: 1rem;
+         opacity: 1;
+         cursor: pointer;
+         transition: all $mainHoverTransitionTime;
+
+         &:focus {
+            outline: none;
+         }
+
+         &:hover {
+            color: #fff;
+            background-color: $mainColor;
+            border-color: $mainColor;
+         }
+
+         &#{$sm}left {
+            margin-right: 1rem;
+         }
+
+         &#{$sm}disabled {
+            opacity: 0.33;
+         }
+      }
+   }
+
+   &#{$sm}swipeable {
+      // background-color: pink;
+      // cursor: grab;
+      // cursor: -moz-grab;
+      // cursor: -webkit-grab;
+   }
+
+   &#{$sm}dragging {
+      // cursor: grabbing;
+      // cursor: -moz-grabbing;
+      // cursor: -webkit-grabbing;
+   }
+}
