@@ -29,7 +29,7 @@
    }
 
    &--wrap-b-margin > * {
-      margin-bottom: $wrapBottomMargin;
+      padding-bottom: $wrapBottomMargin;
    }
 
    &--gutters {
