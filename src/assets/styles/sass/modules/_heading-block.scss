@@ -1,0 +1,27 @@
+.heading-block {
+   position: relative;
+   margin-bottom: 2rem;
+
+   &__title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+
+      margin: {
+         top: 0;
+         bottom: 1rem;
+      }
+
+      color: $mainFontColor;
+   }
+
+   &__subtitle {
+      text-align: center;
+      color: $secondaryFontColor;
+
+      padding: {
+         left: 1rem;
+         right: 1rem;
+      }
+   }
+}
