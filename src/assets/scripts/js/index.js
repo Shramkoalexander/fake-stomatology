@@ -1,7 +1,7 @@
 import Glide from '@glidejs/glide';
 import breakpoints from './breakpoints';
 
-const glide = new Glide('.glide', {
+const teamGlide = new Glide('.glide--team-members', {
    type: 'carousel',
    startAt: 0,
    perView: 3,
@@ -12,4 +12,4 @@ const glide = new Glide('.glide', {
    },
 });
 
-glide.mount();
+teamGlide.mount();
