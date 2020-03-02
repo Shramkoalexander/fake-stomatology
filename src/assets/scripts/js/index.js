@@ -10,6 +10,7 @@ const teamGlide = new Glide('.glide--team-members', {
       [breakpoints.medium - 1]: { perView: 1 },
       [breakpoints.large - 1]: { perView: 2 },
    },
+   keyboard: false,
 });
 
 teamGlide.mount();
