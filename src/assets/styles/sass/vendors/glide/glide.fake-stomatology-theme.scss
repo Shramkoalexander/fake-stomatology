@@ -52,6 +52,66 @@
       }
    }
 
+   &--offers {
+      .#{$glide-class}#{$se}slide {
+         height: auto;
+      }
+
+      .#{$glide-class}#{$se}arrows {
+         text-align: center;
+      }
+
+      .#{$glide-class}#{$se}arrow {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         color: $mainColor;
+         text-transform: uppercase;
+         background-color: #fff;
+         border: 2px solid rgba($color: $mainColor, $alpha: 0);
+         font-size: 1rem;
+         opacity: 1;
+         cursor: pointer;
+         transition: all $mainHoverTransitionTime;
+
+         &:focus {
+            outline: none;
+         }
+
+         &:hover {
+            color: #ff9e00;
+         }
+
+         &#{$sm}left {
+            left: -1px;
+            border-radius: 0 50% 50% 0;
+
+            padding: {
+               top: 0.4rem;
+               right: 0.6rem;
+               bottom: 0.4rem;
+               left: 0.2rem;
+            }
+         }
+
+         &#{$sm}right {
+            right: -1px;
+            border-radius: 50% 0 0 50%;
+
+            padding: {
+               top: 0.4rem;
+               right: 0.2rem;
+               bottom: 0.4rem;
+               left: 0.6rem;
+            }
+         }
+
+         &#{$sm}disabled {
+            opacity: 0.33;
+         }
+      }
+   }
+
    &#{$sm}swipeable {
       // background-color: pink;
       // cursor: grab;
