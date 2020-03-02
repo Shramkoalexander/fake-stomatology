@@ -18,6 +18,21 @@ block content
                .hero__ad-btn-block
                   button.hero__ad-btn.btn.btn--cta-shadowed.btn--bold Записаться на прием
                   button.hero__ad-btn.btn.btn--outlined-white Узнать цены
+   .services-section.page-section
+      .wrapper
+         .heading-block 
+            h1.heading-block__title Наши услуги
+            .heading-block__subtitle Основные направления деятельности нашей клиники
+         .services-section__services-list
+            .row.row--wrap
+               each service in servicesList
+                  .row__col-smallest-12.row__col-S-6.row__col-L-4
+                     .services-section__service-item
+                        a.services-section__service-item-content(href='#')
+                           .services-section__service-icon
+                           .services-section__service-title= service.title
+         .services-section__full-list-btn-block
+            a.btn.btn--accent-color Подробный список услуг
    .team-section.page-section
       .wrapper
          .heading-block 
@@ -44,20 +59,5 @@ block content
                .glide__arrows(data-glide-el='controls')
                   button.glide__arrow.glide__arrow--left(data-glide-dir='<') #[i.fas.fa-chevron-left]
                   button.glide__arrow.glide__arrow--right(data-glide-dir='>') #[i.fas.fa-chevron-right]
-   .services-section.page-section
-      .wrapper
-         .heading-block 
-            h1.heading-block__title Наши услуги
-            .heading-block__subtitle Основные направления деятельности нашей клиники
-         .services-section__services-list
-            .row.row--wrap
-               each service in servicesList
-                  .row__col-smallest-12.row__col-S-6.row__col-L-4
-                     .services-section__service-item
-                        a.services-section__service-item-content(href='#')
-                           .services-section__service-icon
-                           .services-section__service-title= service.title
-         .services-section__full-list-btn-block
-            a.btn.btn--accent-color Подробный список услуг
 block bottomScripts
    script(src='./assets/scripts/js/bundle.js')
