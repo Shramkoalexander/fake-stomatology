@@ -70,15 +70,20 @@
 
    &__other-list-toggle {
       position: relative;
-      color: $mainColor;
+      color: $mainFontColor;
       font-size: $largeFontSize;
       cursor: pointer;
       font-weight: 400;
-      border-bottom: 1px solid getLighterColor($mainColor, 80%);
+      border-bottom: 1px solid $mainOutlineColor;
+      transition: all $mainHoverTransitionTime;
 
       padding: {
          top: 1rem;
          bottom: 1rem;
+      }
+
+      &:hover {
+         color: $mainColor;
       }
 
       &::after {
@@ -100,7 +105,7 @@
    &__other-link-list {
       list-style-type: none;
       font-size: $smallFontSize;
-      border-bottom: 1px solid getLighterColor($mainColor, 80%);
+      border-bottom: 1px solid $mainOutlineColor;
       display: none;
       flex-direction: column;
       justify-content: flex-end;
