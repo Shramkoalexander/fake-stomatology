@@ -14,3 +14,15 @@ const teamGlide = new Glide('.glide--team-members', {
 });
 
 teamGlide.mount();
+
+const offersGlide = new Glide('.glide--offers', {
+   type: 'carousel',
+   startAt: 0,
+   perView: 1,
+   autoplay: 5000,
+   hoverpause: true,
+   keyboard: false,
+   animationTimingFunc: 'ease-in-out',
+});
+
+offersGlide.mount();
