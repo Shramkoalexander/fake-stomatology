@@ -1,0 +1,161 @@
+.offers-section {
+   &__special-offer {
+      background-color: #ff9e00;
+      background-image: url('../images/offers/sale-icon.svg');
+      background-repeat: no-repeat;
+      background-size: 20rem;
+      background-position: 108% -10%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-radius: 1rem;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      margin: {
+         left: auto;
+         right: auto;
+      }
+
+      @include atMedium {
+         flex-direction: row;
+      }
+   }
+
+   &__offer-image {
+      width: 650px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      align-self: stretch;
+
+      &::after {
+         position: absolute;
+         content: '';
+         display: block;
+         width: 100%;
+         height: 101%;
+         right: -2px;
+         background-image: url('../images/offers/offer-bg-el.svg');
+         background-position: right;
+         background-repeat: no-repeat;
+         background-size: contain;
+      }
+
+      &--heal-dream {
+         background-image: url('../images/offers/offer_1.jpg');
+      }
+
+      &--jaw-4-iml {
+         background-image: url('../images/offers/offer_1.jpg');
+      }
+
+      &--impl-zirc-crown {
+         background-image: url('../images/offers/offer_1.jpg');
+      }
+   }
+
+   &__offer-content {
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+      width: 100%;
+      padding: 2rem 3rem;
+
+      @include atMedium {
+         padding: 2rem 3rem 2rem 2rem;
+      }
+   }
+
+   &__offer-title {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      width: 80%;
+
+      @include atLarge {
+         font-size: 2rem;
+      }
+   }
+
+   &__old-offer {
+      color: #fff;
+      text-decoration: line-through;
+      margin-bottom: 0.5rem;
+      width: 100%;
+      align-self: flex-end;
+      font-size: $smallFontSize;
+
+      @include atLarge {
+         font-size: $mainFontSize;
+      }
+   }
+
+   &__new-offer {
+      width: 100%;
+      align-self: center;
+      position: relative;
+      margin-bottom: 1rem;
+
+      span {
+         color: #fff;
+         background-color: $mainFontColor;
+         padding: 0.2rem 0.5rem;
+         border-radius: 0.3rem;
+         font-size: 1.5rem;
+         font-weight: 600;
+         display: inline-block;
+
+         @include atLarge {
+            font-size: 2rem;
+         }
+      }
+   }
+
+   &__calendar-icon {
+      padding-right: 0.5rem;
+   }
+
+   &__expiration-date {
+      color: #fff;
+      flex-grow: 1;
+      width: 50%;
+      font-size: $smallFontSize;
+
+      padding: {
+         top: 1rem;
+         bottom: 1rem;
+      }
+
+      @include atMedium {
+         width: 100%;
+      }
+
+      @include atLarge {
+         width: 50%;
+         font-size: $mainFontSize;
+      }
+   }
+
+   &__btn-block {
+      width: 100%;
+      align-self: flex-end;
+      align-self: center;
+      text-align: left;
+
+      @include atSmall {
+         width: 50%;
+         text-align: right;
+      }
+
+      @include atMedium {
+         text-align: left;
+      }
+
+      @include atLarge {
+         text-align: right;
+      }
+   }
+}
