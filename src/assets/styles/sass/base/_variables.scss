@@ -14,8 +14,9 @@ $mainFontColor: color.change($mainColor, $lightness: 10%);
 $secondaryFontColor: color.change(
    $mainColor,
    $saturation: 10%,
-   $lightness: 65%
+   $lightness: 55%
 );
+// $secondaryFontColor: #586271;
 $mainOutlineColor: color.change($mainColor, $saturation: 10%, $lightness: 90%);
 
 $XXSmall: 320px;
