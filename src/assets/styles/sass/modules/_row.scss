@@ -40,6 +40,10 @@
       padding-right: $gutter;
    }
 
+   &--content-v-centered {
+      align-items: center;
+   }
+
    @include col12('smallest');
 
    @include atSmall {
@@ -56,9 +60,5 @@
 
    @include atXLarge {
       @include col12('XL');
-   }
-
-   &--content-v-centered {
-      align-items: center;
    }
 }
