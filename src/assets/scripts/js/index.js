@@ -1,6 +1,8 @@
 import Glide from '@glidejs/glide';
 import breakpoints from './breakpoints';
 
+// Create sliders
+
 const teamGlide = new Glide('.glide--team-members', {
    type: 'carousel',
    startAt: 0,
