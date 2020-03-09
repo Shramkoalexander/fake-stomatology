@@ -1,0 +1,50 @@
+.book-appointment-section {
+   background-color: $mainColor;
+
+   &__title {
+      color: #fff;
+   }
+
+   &__form {
+      max-width: 50rem;
+
+      margin: {
+         left: auto;
+         right: auto;
+      }
+
+      %first-col-fields {
+         @include atSmall {
+            padding-right: 1rem;
+         }
+      }
+
+      %every-field {
+         padding-bottom: 1rem;
+      }
+   }
+
+   &__name-block {
+      @extend %first-col-fields;
+      @extend %every-field;
+   }
+
+   &__phone-block {
+      @extend %every-field;
+   }
+
+   &__callback-time-block {
+      @extend %first-col-fields;
+      @extend %every-field;
+   }
+
+   &__office-address-block {
+      @extend %every-field;
+   }
+
+   &__submit-block {
+      @extend %every-field;
+      padding-top: 0.5rem;
+      text-align: right;
+   }
+}
