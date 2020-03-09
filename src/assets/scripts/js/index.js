@@ -30,3 +30,29 @@ const offersGlide = new Glide('.glide--offers', {
 });
 
 offersGlide.mount();
+
+// Form validation
+
+elements.callbackTimeInput.addEventListener('change', e => {
+   formValidator.validateSelectOptions(e.target);
+});
+
+elements.officeAddressInput.addEventListener('change', e => {
+   formValidator.validateSelectOptions(e.target);
+});
+
+elements.firstNameInput.addEventListener('blur', e => {
+   formValidator.validateName(e.target);
+});
+
+elements.phoneInput.addEventListener('blur', e => {
+   formValidator.validatePhoneNumber(e.target);
+});
+
+elements.submitBtn.addEventListener('click', e => {
+   e.preventDefault();
+   formValidator.validateName(elements.firstNameInput);
+   formValidator.validatePhoneNumber(elements.phoneInput);
+   formValidator.validateSelectOptions(elements.callbackTimeInput);
+   formValidator.validateSelectOptions(elements.officeAddressInput);
+});
