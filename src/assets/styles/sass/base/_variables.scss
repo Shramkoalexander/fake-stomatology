@@ -10,13 +10,14 @@
 
 $mainColor: #1d7cf8;
 $accentColor: #ffc909;
+$errorColor: #ff0909;
+$successfulColor: #34bc34;
 $mainFontColor: color.change($mainColor, $lightness: 10%);
 $secondaryFontColor: color.change(
    $mainColor,
    $saturation: 10%,
    $lightness: 55%
 );
-// $secondaryFontColor: #586271;
 $mainOutlineColor: color.change($mainColor, $saturation: 10%, $lightness: 90%);
 
 $XXSmall: 320px;
