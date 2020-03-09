@@ -1,5 +1,7 @@
 import Glide from '@glidejs/glide';
+import { elements } from './base';
 import breakpoints from './breakpoints';
+import * as formValidator from './formValidator';
 
 // Create sliders
 
