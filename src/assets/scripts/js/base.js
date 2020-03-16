@@ -5,4 +5,7 @@ export const elements = {
    callbackTimeSelect: document.querySelector('#ba-callback-time'),
    officeAddressSelect: document.querySelector('#ba-office-address'),
    submitBtn: document.querySelector('#ba-submit'),
+   modalPhoneInput: document.querySelector('#callback-modal-phone'),
+   modalSubmitBtn: document.querySelector('#callback-modal-submit'),
+   callbackButtonsAll: document.querySelectorAll('.callback-btn'),
 };
