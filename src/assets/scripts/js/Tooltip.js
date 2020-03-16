@@ -43,6 +43,15 @@ class Tooltip {
       });
    }
 
+   removeAlreadyExisting() {
+      const alreadyExisting = document.getElementById(this.id);
+      if (alreadyExisting) {
+         setTimeout(() => {
+            alreadyExisting.remove();
+         }, 200);
+      }
+   }
+
    show() {
       this.tooltip.setAttribute('data-show', '');
       setTimeout(this.destroy.bind(this), 5000);
