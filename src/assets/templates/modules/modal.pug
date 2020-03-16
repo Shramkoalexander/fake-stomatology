@@ -1,0 +1,7 @@
+block variables
+.modal(class=`${modalTheme} ${modalClass}`)
+   .wrapper
+      .modal__inner
+         h1.modal__title= modalTitle
+         block content
+         button.modal__close(class=`${modalClass}__close`)
