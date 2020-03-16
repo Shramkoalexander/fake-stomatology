@@ -1,0 +1,18 @@
+.callback-modal {
+   &__text {
+      margin-bottom: 1rem;
+      font-size: $smallFontSize;
+
+      padding: {
+         left: 1rem;
+         right: 1rem;
+      }
+   }
+
+   &__phone-block {
+      margin-bottom: 2.7rem;
+      //   input {
+      //  border-color: $mainOutlineColor !important;
+      //   }
+   }
+}
