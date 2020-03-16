@@ -1,0 +1,15 @@
+.sent-message-modal {
+   &__text {
+      margin-bottom: 1.5rem;
+      font-size: $smallFontSize;
+
+      padding: {
+         left: 1rem;
+         right: 1rem;
+      }
+   }
+
+   &__ok-btn {
+      width: 7rem;
+   }
+}
