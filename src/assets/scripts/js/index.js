@@ -33,5 +33,10 @@ const offersGlide = new Glide('.glide--offers', {
 offersGlide.mount();
 
 const bookAppointmentForm = new BookAppointmentForm();
+const callbackModal = new CallbackModal('callback-modal');
 
+elements.callbackButtonsAll.forEach(button => {
+   button.addEventListener('click', () => {
+      callbackModal.open();
+   });
 });
