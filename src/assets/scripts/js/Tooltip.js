@@ -5,6 +5,7 @@ class Tooltip {
       this.popper = null;
       this.tooltip = null;
       this.tooltipMessage = null;
+      this.element = null;
       this.id = id;
       this.create();
    }
@@ -19,6 +20,7 @@ class Tooltip {
       this.tooltip.insertAdjacentElement('beforeend', arrow);
       this.tooltipMessage = document.createElement('span');
       this.tooltipMessage.classList.add('tooltip__text');
+      this.tooltip.addEventListener('click', this.destroy.bind(this));
    }
 
    setMessage(message) {
@@ -27,8 +29,9 @@ class Tooltip {
    }
 
    attachToElement(element) {
-      element.insertAdjacentElement('afterend', this.tooltip);
-      this.popper = createPopper(element, this.tooltip, {
+      this.element = element;
+      this.element.insertAdjacentElement('afterend', this.tooltip);
+      this.popper = createPopper(this.element, this.tooltip, {
          modifiers: [
             {
                name: 'offset',
