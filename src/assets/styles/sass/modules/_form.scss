@@ -5,6 +5,42 @@
       }
    }
 }
+
+@mixin setThemeColors($themeName, $shadowColor) {
+   $themeSelector: if($themeName, '&--' + $themeName, null);
+   #{$themeSelector} input {
+      @include setSharedInputProps(
+         (
+            text,
+            tel,
+            email,
+            date,
+            datetime-local,
+            month,
+            number,
+            password,
+            time,
+            url,
+            search,
+            week,
+            datetime,
+            color
+         )
+      );
+      box-shadow: 0px 0px 0px 1px $shadowColor inset;
+   }
+
+   #{$themeSelector} select {
+      @extend %input-field;
+      appearance: none;
+      box-shadow: 0px 0px 0px 1px $shadowColor inset;
+   }
+
+   #{$themeSelector} option {
+      color: $secondaryFontColor;
+   }
+}
+
 .form {
    %input-field {
       color: $mainFontColor;
@@ -39,33 +75,6 @@
       }
    }
 
-   input {
-      @include setSharedInputProps(
-         (
-            text,
-            tel,
-            email,
-            date,
-            datetime-local,
-            month,
-            number,
-            password,
-            time,
-            url,
-            search,
-            week,
-            datetime,
-            color
-         )
-      );
-   }
-
-   select {
-      @extend %input-field;
-      appearance: none;
-   }
-
-   option {
-      color: $secondaryFontColor;
-   }
+   @include setThemeColors(null, transparent);
+   @include setThemeColors('light', $mainOutlineColor);
 }
