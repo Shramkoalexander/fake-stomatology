@@ -1,0 +1,9 @@
+extends modal
+block variables
+   - var modalTitle = "Ваше сообщение отправлено";
+   - var modalTheme = "modal--success";
+   - var modalClass = "sent-message-modal";
+block content
+   .sent-message-modal__text.
+      Мы свяжемся с вами в ближайшее время
+   button.btn.btn--success.sent-message-modal__ok-btn OK
