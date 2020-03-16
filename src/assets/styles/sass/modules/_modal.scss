@@ -1,0 +1,96 @@
+@mixin setThemeColors(
+   $themeName,
+   $innerBg,
+   $mainTxt,
+   $title,
+   $closeBtn,
+   $closeBtnHover
+) {
+   $themeSelector: if($themeName, '&--' + $themeName, null);
+   #{$themeSelector} &__inner {
+      padding: 3rem 2rem;
+      border-radius: 1rem;
+      background-color: $innerBg;
+      color: $mainTxt;
+      position: relative;
+      box-shadow: 0 90px 90px -60px rgba(0, 0, 0, 0.16);
+      text-align: center;
+
+      @include atMedium {
+         padding: 5rem;
+      }
+   }
+
+   #{$themeSelector} &__title {
+      margin: 0;
+      font-size: $largeFontSize;
+      color: $title;
+      margin-bottom: 1.5rem;
+   }
+
+   #{$themeSelector} &__close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 1.5rem;
+      color: $closeBtn;
+      cursor: pointer;
+      background: none;
+      border: none;
+      outline: none;
+      transition: all $mainHoverTransitionTime;
+
+      &::after {
+         font-family: 'Font Awesome 5 Free';
+         font-weight: 600;
+         content: '\f00d';
+      }
+
+      &:hover {
+         color: $closeBtnHover;
+         transform: rotate(90deg);
+      }
+   }
+}
+
+.modal {
+   position: fixed;
+   z-index: -1;
+   background-color: rgba($mainFontColor, 0.5);
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   opacity: 0;
+   visibility: hidden;
+   transform: scale(1.2);
+   transition: all $mainHoverTransitionTime ease-out;
+
+   &--is-visible {
+      z-index: 200;
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+   }
+
+   @include setThemeColors(
+      null,
+      #fff,
+      $mainFontColor,
+      $mainColor,
+      $mainOutlineColor,
+      $mainColor
+   );
+   @include setThemeColors(dark, $accentColor, #fff, #fff, #fff, #fff);
+   @include setThemeColors(
+      success,
+      #fff,
+      $mainFontColor,
+      $successfulColor,
+      $mainOutlineColor,
+      $successfulColor
+   );
+}
