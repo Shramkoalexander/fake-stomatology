@@ -1,0 +1,16 @@
+extends modal
+block variables
+   - var modalTitle = "Закажите обратный звонок";
+   - var modalTheme = "";
+   - var modalClass = "callback-modal";
+block content
+   .callback-modal__text Оставьте номер телефона и мы перезвоним вам в течение минуты
+   #callback-modal__form.form.form--light.callback-modal__form
+      .callback-modal__phone-block
+         input#callback-modal-phone(
+            name='phone',
+            type='tel',
+            placeholder='Ваш номер телефона *',
+            autocomplete='off'
+         )
+   button#callback-modal-submit.btn(type='submit', form='callback-modal__form') Перезвоните мне
