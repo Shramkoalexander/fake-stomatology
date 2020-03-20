@@ -9,3 +9,8 @@ export const elements = {
    modalSubmitBtn: document.querySelector('#callback-modal-submit'),
    callbackButtonsAll: document.querySelectorAll('.callback-btn'),
 };
+
+export const elementStrings = {
+   officeDescriptionContent: 'map-block__descr-content',
+   subwayListItem: `map-block__subway-list-item`,
+};
