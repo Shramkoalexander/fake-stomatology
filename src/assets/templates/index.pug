@@ -146,5 +146,36 @@ block content
                            ) Записаться на прием
       include modules/callback-modal
       include modules/sent-message-modal
+   .map-section.page-section
+      .wrapper
+         .heading-block 
+            h1.heading-block__title Контакты
+            .heading-block__subtitle Филиалы наших клиник в Москве
+         .map-block 
+            .map-block__subway-block
+               ul.map-block__subway-list
+                  each office in offices
+                     li.map-block__subway-list-item(data-office-to-show=`${office.id}`): button м. #{office.subway}
+         .map-block__contact-info
+            .row.row--wrap-reverse
+               .row__col-smallest-12.row__col-M-6.row__col-L-5
+                  .map-block__descr.generic-content-container
+                     each office in offices
+                        .map-block__descr-content(
+                           id=`${office.id}`,
+                           data-coord=`${office.coordinates}`
+                        )
+                           .map-block__title.
+                              #[span Стоматология] #[br]
+                              #[+subwayIcon(office.id)] #{office.subway}
+                           .map-block__address #{office.address}
+                           .map-block__office-hours #[span Приходите к нам] #[br] #{office.officeHours}
+                           .map-block__phone.
+                              #[span Звоните круглосуточно] 
+                              #[br]  
+                              #[a(href=`tel:${office.phoneNumber.replace(/\s/g, "")}`) #{office.phoneNumber}] 
+                           .map-block__email: a(href=`mailto:${office.email}`) #{office.email}
+               .row__col-smallest-12.row__col-M-6.row__col-L-7
+                  #y-map.map-block__map 
 block bottomScripts
    script(src='./assets/scripts/js/bundle.js')
