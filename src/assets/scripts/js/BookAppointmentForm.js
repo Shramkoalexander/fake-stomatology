@@ -30,7 +30,6 @@ class BookAppointmentForm extends Form {
       );
 
       this.submitBtn = elements.submitBtn;
-
       this.events();
    }
 
@@ -41,10 +40,10 @@ class BookAppointmentForm extends Form {
          });
       });
 
-      this.setSubmitEventHandler(e => {
+      this.submitBtn.addEventListener('click', e => {
          e.preventDefault();
          if (this.validateForm()) {
-            this.modal.open();
+            this.openModal();
          }
       });
    }

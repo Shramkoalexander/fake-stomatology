@@ -23,6 +23,7 @@ class CallbackModal extends Modal {
          e.preventDefault();
          if (this.callbackForm.validateForm()) {
             this.close();
+            this.callbackForm.openModal();
          }
       });
    }

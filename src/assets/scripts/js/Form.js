@@ -19,6 +19,10 @@ class Form {
       return this.fields;
    }
 
+   openModal() {
+      this.modal.open();
+   }
+
    validateForm() {
       const validityStates = this.fields.map(field => field.validate());
       const isValid = validityStates.reduce(
