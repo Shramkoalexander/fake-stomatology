@@ -1,0 +1,168 @@
+@mixin contactIcon($iconCode) {
+   &::before {
+      position: absolute;
+      left: 0.5rem;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 600;
+      content: $iconCode;
+      transform: translateX(-50%);
+   }
+}
+
+%common-properties {
+   padding-left: 2rem;
+   position: relative;
+}
+
+.map-block {
+   &__subway-block {
+      text-align: center;
+
+      margin: {
+         top: 2rem;
+         bottom: 2rem;
+      }
+   }
+
+   &__subway-list {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid $mainOutlineColor;
+      border-radius: 1rem;
+      overflow: hidden;
+
+      @include atMedium {
+         display: inline-flex;
+         flex-direction: row;
+      }
+   }
+
+   &__subway-list-item {
+      font-size: $mainFontSize;
+      position: relative;
+      border-bottom: 1px solid $mainOutlineColor;
+
+      &--active button {
+         color: $mainColor;
+      }
+
+      button {
+         padding: 0.5rem 1rem;
+         width: 100%;
+      }
+
+      button:hover {
+         color: $mainColor;
+      }
+
+      &:last-child {
+         border-bottom: none;
+      }
+
+      @include atMedium {
+         border-bottom: none;
+
+         &::after {
+            position: absolute;
+            content: '';
+            width: 2px;
+            height: 1rem;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $mainOutlineColor;
+         }
+
+         &:last-child {
+            &::after {
+               display: none;
+            }
+         }
+      }
+   }
+
+   &__contact-info {
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.16);
+      position: relative;
+
+      @include atMedium {
+         border-radius: 2rem;
+      }
+   }
+
+   &__descr {
+      position: relative;
+      background-color: rgba($color: #000, $alpha: 0.03);
+      height: 100%;
+      width: 100%;
+      padding: 3rem 2rem;
+
+      @include atMedium {
+         padding: 3rem;
+      }
+
+      a {
+         color: $mainFontColor;
+
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+   &__descr-content {
+      display: none;
+      position: relative;
+   }
+
+   &__descr-content--is-visible {
+      display: block;
+   }
+
+   &__map {
+      background-color: rgba($color: #000, $alpha: 0.03);
+      height: 18.75rem;
+      width: 100%;
+
+      @include atSmall {
+         height: 25rem;
+      }
+
+      @include atMedium {
+         height: 31.25rem;
+      }
+   }
+
+   &__title {
+      font-size: $largeFontSize;
+      margin-bottom: 2rem;
+
+      span {
+         font-weight: 600;
+      }
+   }
+
+   &__address {
+      @include contactIcon('\f3c5');
+      @extend %common-properties;
+      margin-bottom: 1rem;
+   }
+
+   &__office-hours {
+      @include contactIcon('\f017');
+      @extend %common-properties;
+      margin-bottom: 1rem;
+   }
+
+   &__phone {
+      @include contactIcon('\f879');
+      @extend %common-properties;
+      margin-bottom: 1rem;
+   }
+
+   &__email {
+      @include contactIcon('\f0e0');
+      @extend %common-properties;
+   }
+}
