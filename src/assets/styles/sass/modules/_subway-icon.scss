@@ -1,0 +1,20 @@
+@mixin styleSubwayIcon($officeSubway, $subwayColor) {
+   &--#{$officeSubway} polygon {
+      fill: $subwayColor;
+   }
+}
+
+.subway-icon {
+   $arbatColor: #0252a2;
+   $proletColor: #b61d8e;
+   $belorusColor: #029a55;
+
+   margin: {
+      top: 0.5rem;
+      right: 0.3rem;
+   }
+
+   @include styleSubwayIcon(office-arbat, $arbatColor);
+   @include styleSubwayIcon(office-prolet, $proletColor);
+   @include styleSubwayIcon(office-belorus, $belorusColor);
+}
