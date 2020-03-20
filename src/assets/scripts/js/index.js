@@ -1,8 +1,10 @@
 import Glide from '@glidejs/glide';
+// import { doc } from 'prettier';
 import { elements } from './base';
 import breakpoints from './breakpoints';
 import CallbackModal from './CallbackModal';
 import BookAppointmentForm from './BookAppointmentForm';
+import MapBlock from './MapBlock';
 
 // Create sliders
 
@@ -40,3 +42,5 @@ elements.callbackButtonsAll.forEach(button => {
       callbackModal.open();
    });
 });
+
+const mapBlock = new MapBlock();
