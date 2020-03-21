@@ -12,5 +12,7 @@ export const elements = {
 
 export const elementStrings = {
    officeDescriptionContent: 'map-block__descr-content',
-   subwayListItem: `map-block__subway-list-item`,
+   subwayListItem: 'map-block__subway-list-item',
+   footerToggle: 'footer__other-list-toggle',
+   footerLinkList: 'footer__other-link-list',
 };

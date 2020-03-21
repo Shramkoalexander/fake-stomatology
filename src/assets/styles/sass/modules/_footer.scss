@@ -91,10 +91,17 @@
          position: absolute;
          right: 1rem;
          top: 50%;
-         transform: translateY(-50%);
+         transform: translateY(-50%) rotate(0deg);
+         transition: transform $mainHoverTransitionTime;
          font-family: 'Font Awesome 5 Free';
          font-weight: 600;
          content: '\f078';
+      }
+
+      &--opened {
+         &::after {
+            transform: translateY(-50%) rotate(180deg);
+         }
       }
 
       @include atMedium {
@@ -103,23 +110,40 @@
    }
 
    &__other-link-list {
+      @mixin isVisible() {
+         height: 100%;
+         opacity: 1;
+         visibility: visible;
+      }
+
       list-style-type: none;
       font-size: $smallFontSize;
       border-bottom: 1px solid $mainOutlineColor;
-      display: none;
+      display: flex;
+      opacity: 0;
+      visibility: hidden;
+      transition: visibility 0s, opacity 0.2s, height 0.2s, padding 0.2s;
       flex-direction: column;
       justify-content: flex-end;
       margin: 0;
+      height: 0;
 
       padding: {
          right: 0;
          left: 1rem;
-         top: 2rem;
-         bottom: 2rem;
+         top: 0;
+         bottom: 0;
       }
 
-      &--opened {
-         display: flex;
+      &--is-visible {
+         @include isVisible();
+
+         padding: {
+            right: 0;
+            left: 1rem;
+            top: 2rem;
+            bottom: 2rem;
+         }
       }
 
       a {
@@ -132,9 +156,15 @@
       }
 
       @include atMedium {
-         padding: 0;
-         display: flex;
          flex-direction: row;
+         @include isVisible();
+
+         padding: {
+            left: 0;
+            right: 1rem;
+            top: 0;
+            bottom: 0;
+         }
       }
    }
 
