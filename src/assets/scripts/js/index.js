@@ -1,5 +1,4 @@
 import Glide from '@glidejs/glide';
-// import { doc } from 'prettier';
 import { elements } from './base';
 import breakpoints from './breakpoints';
 import CallbackModal from './CallbackModal';
