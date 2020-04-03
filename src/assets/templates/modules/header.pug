@@ -56,8 +56,6 @@ header.header.header--is-visible
                .header__navbar-clbk-block: button.btn.callback-btn= callbackBtnText
 .header-menu-dropdown
    .wrapper 
-      .wrapper 
-   .wrapper 
       .row.row--gutters.row--wrap.row--wrap-b-margin
          each field in servicesList
             .row__col-smallest-12.row__col-M-6.row__col-L-4
@@ -66,3 +64,18 @@ header.header.header--is-visible
                   ul.header-menu-dropdown__field-list
                      each service in field.items
                         li.header-menu-dropdown__field-item: a= service
+.mobile-nav
+   ul.mobile-nav__menu
+      each item in navLinks
+         if (item.hasSubMenu)
+            li.mobile-nav__menu-item(id=`mobile-menu-${item.id}`)
+               a #{item.link}#[i.fas.fa-angle-down.mobile-nav__arrow-icon]
+               ul.mobile-nav__submenu 
+                  each field in item.submenu
+                     li.mobile-nav__submenu-field  #[a #{field.title}]
+                        ul.mobile-nav__submenu-field-list
+                           each fieldItem in field.items
+                              li.mobile-nav__submenu-field-item: a #{fieldItem}
+         else
+            li.mobile-nav__menu-item: a= item.link
+      button.mobile-nav__close
