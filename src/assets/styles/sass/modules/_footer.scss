@@ -55,7 +55,7 @@
    &__phone {
       text-align: center;
 
-      @include atMedium {
+      @include atLarge {
          text-align: right;
       }
    }
