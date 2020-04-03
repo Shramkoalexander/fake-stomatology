@@ -5,6 +5,7 @@ import CallbackModal from './CallbackModal';
 import BookAppointmentForm from './BookAppointmentForm';
 import MapBlock from './MapBlock';
 import FooterToggle from './FooterToggle';
+import MenuDropdown from './MenuDropdown';
 import ScrollToTop from './ScrollToTop';
 
 // Create sliders
@@ -47,3 +48,4 @@ elements.callbackButtonsAll.forEach(button => {
 const mapBlock = new MapBlock();
 const footerToggle = new FooterToggle();
 const scrollToTop = new ScrollToTop();
+const menuDropdown = new MenuDropdown();
