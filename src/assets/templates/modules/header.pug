@@ -4,7 +4,7 @@ header.header
    .header__top-section
       .wrapper
          .row.row--content-v-centered 
-            .row__col-smallest-2.row__col-S-none
+            .row__col-smallest-2.row__col-M-none
                .header__menu-button-block
                   button.header__menu-button: i.fas.fa-bars
             .row__col-smallest-8.row__col-M-4.row__col-XL-3
@@ -32,11 +32,11 @@ header.header
             .row__col-smallest-none.row__col-XL-3
                .header__social-media
                   include ../modules/social-media
-            .row__col-smallest-none.row__col-S-4.row__col-XL-2
+            .row__col-smallest-none.row__col-M-4.row__col-XL-2
                .header__phone.phone-block
                   .phone-block__comment Звоните круглосуточно
                   .phone-block__number: a(href=`tel:${phoneNumber.replace(/\s/g, "")}`)= phoneNumber
-            .row__col-smallest-2.row__col-S-none
+            .row__col-smallest-2.row__col-M-none
                .header__phone-icon
                   a(href=`tel:${phoneNumber.replace(/\s/g, "")}`): i.fas.fa-phone-alt
             .row__col-smallest-none.row__col-M-4.row__col-XL-none
