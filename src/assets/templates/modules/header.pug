@@ -54,14 +54,15 @@ header.header
                            li.main-menu__item: a(href='#')= item.link
             .row__col-smallest-none.row__col-XL-2
                .header__navbar-clbk-block: button.btn.callback-btn= callbackBtnText
-   .header__submenu-section
+.header-menu-dropdown
+   .wrapper 
       .wrapper 
-         .main-menu__submenu
-            .row.row--gutters.row--wrap.row--wrap-b-margin
-               each field in servicesList
-                  .row__col-smallest-12.row__col-M-6.row__col-L-4
-                     .main-menu__submenu-content
-                        h1.main-menu__submenu-field-title: a(href='#')= field.title
-                        ul.main-menu__submenu-field-list
-                           each service in field.items
-                              li.main-menu__submenu-field-item: a(href='#')= service
+   .wrapper 
+      .row.row--gutters.row--wrap.row--wrap-b-margin
+         each field in servicesList
+            .row__col-smallest-12.row__col-M-6.row__col-L-4
+               .header-menu-dropdown__content
+                  h1.header-menu-dropdown__field-title: a(href='#')= field.title
+                  ul.header-menu-dropdown__field-list
+                     each service in field.items
+                        li.header-menu-dropdown__field-item: a(href='#')= service
