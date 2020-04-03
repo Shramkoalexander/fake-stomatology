@@ -40,13 +40,16 @@
          right: auto;
       }
 
-      @include atSmall {
-         text-align: left;
-         margin-left: 0;
+      @include atXSmall {
          width: 200px;
       }
 
       @include atMedium {
+         margin-left: 0;
+         text-align: left;
+      }
+
+      @include atLarge {
          width: 250px;
       }
    }
