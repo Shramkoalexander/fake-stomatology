@@ -9,6 +9,7 @@ import HidingHeader from './HidingHeader';
 import MobileNav from './MobileNav';
 import MenuDropdown from './MenuDropdown';
 import ScrollToTop from './ScrollToTop';
+import SmoothScrollHandler from './SmoothScrollHandler';
 
 // Create sliders
 
@@ -49,6 +50,7 @@ elements.callbackButtonsAll.forEach(button => {
 
 const mapBlock = new MapBlock();
 const footerToggle = new FooterToggle();
+const smoothScroll = new SmoothScrollHandler();
 const scrollToTop = new ScrollToTop();
 const hidingHeader = new HidingHeader();
 const menuDropdown = new MenuDropdown();
