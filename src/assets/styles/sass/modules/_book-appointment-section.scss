@@ -47,4 +47,12 @@
       padding-top: 0.5rem;
       text-align: right;
    }
+
+   &__submit-btn {
+      width: 100%;
+
+      @include atSmall {
+         width: auto;
+      }
+   }
 }
