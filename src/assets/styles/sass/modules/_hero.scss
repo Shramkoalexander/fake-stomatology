@@ -77,7 +77,7 @@
 
    &__ad-title {
       color: #fff;
-      font-size: 2rem;
+      font-size: 1.5rem;
       text-align: center;
 
       margin: {
@@ -101,6 +101,7 @@
    &__ad-btn-block {
       display: flex;
       flex-wrap: wrap;
+      text-align: center;
 
       margin: {
          bottom: -1rem;
@@ -109,12 +110,12 @@
    }
 
    &__ad-btn {
+      width: 100%;
+
       margin: {
          right: 1rem;
          bottom: 1rem;
       }
-
-      width: 100%;
 
       @include atSmall {
          width: auto;
