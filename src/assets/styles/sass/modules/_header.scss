@@ -102,20 +102,13 @@
 
    &__nav-section {
       display: none;
-      padding: 0;
       overflow-x: hidden;
 
-      @include atSmall {
+      @include atMedium {
          display: block;
+
          border: {
             top: 1px solid $mainOutlineColor;
-         }
-      }
-
-      @include atXLarge {
-         padding: {
-            top: 0.8rem;
-            bottom: 0.8rem;
          }
       }
    }
