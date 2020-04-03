@@ -55,7 +55,7 @@ block content
                each service in servicesList
                   .row__col-smallest-12.row__col-S-6.row__col-L-4
                      .services-section__service-item
-                        a.services-section__service-item-content(href='#')
+                        a.services-section__service-item-content
                            .services-section__service-icon
                            .services-section__service-title= service.title
          .services-section__full-list-btn-block
@@ -91,7 +91,7 @@ block content
                                     alt='Портрет врача'
                                  )
                               .team-section__member-content
-                                 .team-section__member-fullname: a(href='#') #[span.team-section__member-surname= member.surName] #[span.team-section__name-n-patronymic= member.namePatronymic]
+                                 .team-section__member-fullname: a #[span.team-section__member-surname= member.surName] #[span.team-section__name-n-patronymic= member.namePatronymic]
                                  .team-section__member-descr= member.descr
                                  .team-section__member-experience #[span Стаж:] #{member.experience}
                               .team-section__show-details-block 

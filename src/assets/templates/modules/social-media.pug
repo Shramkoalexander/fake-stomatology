@@ -1,6 +1,6 @@
 - var socialMedias = [["fab fa-instagram", "inst"], ["fab fa-vk", "vk"], ["fab fa-facebook-f","fb"], ["fab fa-odnoklassniki", "odnkl"], ["fab fa-youtube", "ytb"]];
 ul.social-media-list
    each item in socialMedias
-      li(class=`social-media-list__item social-media-list__item--${item[1]}`): a(
-         href='#'
-      ): i(class=`${item[0]}`)
+      li(class=`social-media-list__item social-media-list__item--${item[1]}`): a: i(
+         class=`${item[0]}`
+      )

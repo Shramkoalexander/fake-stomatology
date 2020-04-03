@@ -49,9 +49,9 @@ header.header
                   ul.main-menu
                      each item in navLinks
                         if (item.hasSubMenu)
-                           li.main-menu__item(id=`menu-${item.id}`): a(href='#') #{item.link}#[i.fas.fa-sort-down.main-menu__submenu-icon]
+                           li.main-menu__item(id=`menu-${item.id}`): a #{item.link}#[i.fas.fa-sort-down.main-menu__submenu-icon]
                         else
-                           li.main-menu__item: a(href='#')= item.link
+                           li.main-menu__item: a= item.link
             .row__col-smallest-none.row__col-XL-2
                .header__navbar-clbk-block: button.btn.callback-btn= callbackBtnText
 .header-menu-dropdown
@@ -62,7 +62,7 @@ header.header
          each field in servicesList
             .row__col-smallest-12.row__col-M-6.row__col-L-4
                .header-menu-dropdown__content
-                  h1.header-menu-dropdown__field-title: a(href='#')= field.title
+                  h1.header-menu-dropdown__field-title: a= field.title
                   ul.header-menu-dropdown__field-list
                      each service in field.items
-                        li.header-menu-dropdown__field-item: a(href='#')= service
+                        li.header-menu-dropdown__field-item: a= service
