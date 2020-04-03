@@ -7,7 +7,9 @@ export const elements = {
    submitBtn: document.querySelector('#ba-submit'),
    modalPhoneInput: document.querySelector('#callback-modal-phone'),
    modalSubmitBtn: document.querySelector('#callback-modal-submit'),
-   callbackButtonsAll: document.querySelectorAll('.callback-btn'),
+   header: document.querySelector('header'),
+   headerMenuButton: document.querySelector('.header__menu-button'),
+   headerMenuServices: document.querySelector('#menu-services'),
 };
 
 export const elementStrings = {
@@ -15,4 +17,17 @@ export const elementStrings = {
    subwayListItem: 'map-block__subway-list-item',
    footerToggle: 'footer__other-list-toggle',
    footerLinkList: 'footer__other-link-list',
+   headerDropdown: 'header-menu-dropdown',
+   mainMenuItem: 'main-menu__item',
+   header: 'header',
+   mobileNav: 'mobile-nav',
+   mobileNavItem: 'mobile-nav__menu-item',
+   modal: 'modal',
+   headerOurClinics: 'header__our-clinics',
+   headerClinicsCount: 'header__clinics-count',
+   headerClinicsPinIcon: 'header__clinics-pin-icon',
+   headerMobileMenuServices: 'mobile-menu-services',
+   scrollToTop: 'scroll-to-top',
+   bookAppointmentSection: 'book-appointment-section',
+   callbackBtn: 'callback-btn',
 };
