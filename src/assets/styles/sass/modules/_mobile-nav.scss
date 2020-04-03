@@ -1,0 +1,144 @@
+.mobile-nav {
+   z-index: -1;
+   opacity: 0;
+   visibility: hidden;
+   position: fixed;
+   background-color: rgba($mainFontColor, 0.5);
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   transition: all 0.35s;
+
+   &--is-opened {
+      z-index: 100;
+      opacity: 1;
+      visibility: visible;
+   }
+
+   &--is-opened &__menu {
+      transform: translateX(0);
+   }
+
+   @include atMedium {
+      display: none;
+   }
+
+   &__menu {
+      transition: transform $mainHoverTransitionTime;
+      position: relative;
+      width: 100%;
+      overflow-y: auto;
+      height: 100%;
+      background-color: #fff;
+      text-align: center;
+      transform: translateX(-100%);
+
+      padding: {
+         top: 4rem;
+         bottom: 4rem;
+      }
+
+      @include atXSmall {
+         width: 25rem;
+      }
+   }
+
+   &__menu-item {
+      border-bottom: 1px solid $mainOutlineColor;
+      position: relative;
+
+      &:first-child {
+         border-top: 1px solid $mainOutlineColor;
+      }
+
+      > a {
+         display: block;
+         padding: 1rem 2rem;
+      }
+
+      a {
+         color: $mainFontColor;
+      }
+
+      a:hover {
+         color: $mainColor;
+      }
+   }
+
+   &__menu-item--is-opened &__arrow-icon {
+      transform: rotate(180deg);
+   }
+
+   &__arrow-icon {
+      position: absolute;
+      right: 25px;
+      transition: all $mainHoverTransitionTime;
+   }
+
+   &__menu-item--is-opened &__submenu {
+      height: 100%;
+      opacity: 1;
+      visibility: visible;
+
+      padding: {
+         top: 1rem;
+         bottom: 1rem;
+      }
+   }
+
+   &__submenu {
+      background-color: rgba($color: #000, $alpha: 0.03);
+      border-top: 1px solid $mainOutlineColor;
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all $mainHoverTransitionTime;
+
+      padding: {
+         left: 2rem;
+         right: 2rem;
+      }
+   }
+
+   &__submenu-field {
+      padding: 1rem 0;
+
+      > a {
+         font-weight: 600;
+      }
+   }
+
+   &__submenu-field-list {
+      padding: 1rem 0;
+   }
+
+   &__submenu-field-item {
+      padding: 0.5rem 0;
+   }
+
+   &__close {
+      z-index: 150;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 1.5rem;
+      color: $mainOutlineColor;
+      cursor: pointer;
+      background: none;
+      border: none;
+      outline: none;
+      transition: all $mainHoverTransitionTime;
+
+      &::after {
+         font-family: 'Font Awesome 5 Free';
+         font-weight: 600;
+         content: '\f00d';
+      }
+
+      &:hover {
+         color: $mainColor;
+         transform: rotate(90deg);
+      }
+   }
+}
