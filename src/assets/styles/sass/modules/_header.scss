@@ -72,6 +72,14 @@
       top: -0.06rem;
    }
 
+   &__phone {
+      text-align: center;
+
+      @include atLarge {
+         text-align: right;
+      }
+   }
+
    &__phone-icon {
       text-align: right;
       font-size: $largeFontSize;
