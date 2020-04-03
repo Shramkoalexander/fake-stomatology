@@ -5,6 +5,7 @@ import CallbackModal from './CallbackModal';
 import BookAppointmentForm from './BookAppointmentForm';
 import MapBlock from './MapBlock';
 import FooterToggle from './FooterToggle';
+import HidingHeader from './HidingHeader';
 import MobileNav from './MobileNav';
 import MenuDropdown from './MenuDropdown';
 import ScrollToTop from './ScrollToTop';
@@ -49,5 +50,6 @@ elements.callbackButtonsAll.forEach(button => {
 const mapBlock = new MapBlock();
 const footerToggle = new FooterToggle();
 const scrollToTop = new ScrollToTop();
+const hidingHeader = new HidingHeader();
 const menuDropdown = new MenuDropdown();
 const mobileNav = new MobileNav();
