@@ -9,7 +9,7 @@ block headStyles
    )
    link(rel='icon', type='image/png', href='./assets/images/favicon.png')
 block content
-   .hero
+   section.hero
       .wrapper
          .hero__content
             .hero__ad
@@ -17,9 +17,7 @@ block content
                .hero__ad-text.generic-content-container.
                   "Den's Dent" - это сеть семейных клиник, ориентированных на высокотехнологичные методы лечения, имплантации и протезирования зубов
                .hero__ad-btn-block
-                  button.hero__ad-btn.btn.btn--cta-shadowed Записаться на прием
-                  button.hero__ad-btn.btn.btn--outlined-white Узнать цены
-   .offers-section.page-section
+   section.offers-section.page-section
       .wrapper
          .heading-block
             h1.heading-block__title Акции
@@ -43,7 +41,7 @@ block content
                .glide__arrows(data-glide-el='controls')
                   button.glide__arrow.glide__arrow--left(data-glide-dir='<') #[i.fas.fa-chevron-left]
                   button.glide__arrow.glide__arrow--right(data-glide-dir='>') #[i.fas.fa-chevron-right]
-   .services-section.page-section
+   section.services-section.page-section
       .wrapper
          .heading-block 
             h1.heading-block__title Наши услуги
@@ -58,7 +56,7 @@ block content
                            .services-section__service-title= service.title
          .services-section__full-list-btn-block
             a.btn.btn--accent-color Подробный список услуг
-   .about-us-section.page-section
+   section.about-us-section.page-section
       .wrapper
          .about-us-section__content 
             .row.row--wrap.row--wrap-b-margin
@@ -71,7 +69,7 @@ block content
                      p Доверьте свои зубы профессионалам стоматологической клиники «Den's Dent».
                .row__col-smallest-12.row__col-L-5.row__col-XL-5
                   .about-us-section__image
-   .team-section.page-section
+   section.team-section.page-section
       .wrapper
          .heading-block 
             h1.heading-block__title Лучшая команда врачей
@@ -97,7 +95,7 @@ block content
                .glide__arrows(data-glide-el='controls')
                   button.glide__arrow.glide__arrow--left(data-glide-dir='<') #[i.fas.fa-chevron-left]
                   button.glide__arrow.glide__arrow--right(data-glide-dir='>') #[i.fas.fa-chevron-right]
-   .book-appointment-section.page-section
+   section.book-appointment-section.page-section
       .wrapper
          .book-appointment-section__content
             .book-appointment-section__formbox
@@ -146,7 +144,7 @@ block content
                            ) Записаться на прием
       include modules/callback-modal
       include modules/sent-message-modal
-   .map-section.page-section
+   section.map-section.page-section
       .wrapper
          .heading-block 
             h1.heading-block__title Контакты
