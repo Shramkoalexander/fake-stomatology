@@ -1,0 +1,36 @@
+.scroll-to-top {
+   position: fixed;
+   bottom: 120px;
+   right: 40px;
+   font-size: 1.3rem;
+   box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.7);
+   border-radius: 50%;
+   width: 45px;
+   height: 45px;
+   overflow: hidden;
+   background-color: $mainOutlineColor;
+   display: none;
+   visibility: hidden;
+   opacity: 0;
+   transition: visibility $mainHoverTransitionTime,
+      opacity $mainHoverTransitionTime;
+
+   a {
+      width: 100%;
+      height: 100%;
+      color: $mainFontColor;
+      color: rgba($color: #000, $alpha: 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &--is-visible {
+      opacity: 1;
+      visibility: visible;
+   }
+
+   @include atXLarge(150px) {
+      display: block;
+   }
+}
