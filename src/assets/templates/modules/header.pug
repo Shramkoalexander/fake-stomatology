@@ -49,7 +49,7 @@ header.header
                   ul.main-menu
                      each item in navLinks
                         if (item.hasSubMenu)
-                           li.main-menu__item: a(href='#') #{item.link}#[i.fas.fa-sort-down.main-menu__submenu-icon]
+                           li.main-menu__item(id=`menu-${item.id}`): a(href='#') #{item.link}#[i.fas.fa-sort-down.main-menu__submenu-icon]
                         else
                            li.main-menu__item: a(href='#')= item.link
             .row__col-smallest-none.row__col-XL-2
