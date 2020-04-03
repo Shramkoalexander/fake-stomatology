@@ -1,0 +1,99 @@
+.header-menu-dropdown {
+   z-index: -1;
+   opacity: 0;
+   visibility: hidden;
+   transition: visibility $mainHoverTransitionTime,
+      opacity $mainHoverTransitionTime;
+   position: fixed;
+   display: none;
+   background-color: #fff;
+   top: 0;
+   left: 0;
+   width: 100%;
+   overflow-y: auto;
+   bottom: 0;
+
+   padding: {
+      top: 1.5rem;
+      bottom: 1.5rem;
+      right: 1rem;
+      left: 1rem;
+   }
+
+   &--opened {
+      z-index: 9;
+      position: fixed;
+      opacity: 1;
+      visibility: visible;
+   }
+
+   @include atMedium {
+      display: block;
+
+      padding: {
+         top: 3.5rem;
+         bottom: 3.5rem;
+      }
+   }
+
+   @include atLarge {
+      padding: {
+         right: 2rem;
+         left: 2rem;
+      }
+   }
+
+   &__content {
+      font-size: $smallFontSize;
+
+      @include atXLarge {
+         font-size: $mainFontSize;
+      }
+   }
+
+   &__field-title {
+      font-size: $smallFontSize;
+      text-transform: uppercase;
+      border-bottom: 1px solid $mainOutlineColor;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+
+      margin: {
+         top: 0;
+         bottom: 0.8rem;
+      }
+
+      @include atXLarge {
+         font-size: $mainFontSize;
+      }
+
+      a {
+         color: $mainFontColor;
+         &:hover {
+            color: $mainColor;
+         }
+      }
+   }
+
+   &__field-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+   }
+
+   &__field-item {
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+
+      a {
+         color: $mainFontColor;
+
+         &:hover {
+            color: $mainColor;
+         }
+      }
+   }
+}
