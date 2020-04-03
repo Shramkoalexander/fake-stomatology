@@ -1,6 +1,17 @@
 .header {
    position: relative;
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 10;
+   background-color: #fff;
    box-shadow: 0 0 33px rgba($mainFontColor, 0.15);
+   transform: translateY(-100%);
+   transition: all 0.3s;
+
+   &--is-visible {
+      transform: translateY(0);
+   }
 
    &__top-section {
       padding: {
