@@ -1,10 +1,14 @@
 import CallbackForm from './CallbackForm';
 import Modal from './Modal';
+import { elementStrings } from './base';
 
 class CallbackModal extends Modal {
    constructor(name) {
       super(name);
       this.callbackForm = new CallbackForm();
+      this.triggerButtons = document.querySelectorAll(
+         `.${elementStrings.callbackBtn}`
+      );
       this.events();
    }
 
@@ -25,6 +29,12 @@ class CallbackModal extends Modal {
             this.close();
             this.callbackForm.openModal();
          }
+      });
+
+      this.triggerButtons.forEach(button => {
+         button.addEventListener('click', () => {
+            this.open();
+         });
       });
    }
 

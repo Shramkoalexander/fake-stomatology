@@ -1,5 +1,4 @@
 import Glide from '@glidejs/glide';
-import { elements } from './base';
 import breakpoints from './breakpoints';
 import CallbackModal from './CallbackModal';
 import BookAppointmentForm from './BookAppointmentForm';
@@ -41,13 +40,6 @@ offersGlide.mount();
 
 const bookAppointmentForm = new BookAppointmentForm();
 const callbackModal = new CallbackModal('callback-modal');
-
-elements.callbackButtonsAll.forEach(button => {
-   button.addEventListener('click', () => {
-      callbackModal.open();
-   });
-});
-
 const mapBlock = new MapBlock();
 const footerToggle = new FooterToggle();
 const smoothScroll = new SmoothScrollHandler();
