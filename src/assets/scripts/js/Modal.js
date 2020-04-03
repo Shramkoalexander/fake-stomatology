@@ -1,4 +1,4 @@
-// import { elements } from './base';
+import { elementStrings } from './base';
 
 class Modal {
    constructor(name) {
@@ -6,13 +6,13 @@ class Modal {
       this.modal = document.querySelector(`.${this.name}`);
       this.closeModalButton = document.querySelector(`.${this.name}__close`);
       this.keyPressListener = this.keyPressHandler.bind(this);
-      this.visibleClassName = 'modal--is-visible';
+      this.visibleClassName = `${elementStrings.modal}--is-visible`;
    }
 
    events() {
       this.closeModalButton.addEventListener('click', this.close.bind(this));
       this.modal.addEventListener('click', e => {
-         if (!e.target.closest('.modal__inner')) {
+         if (!e.target.closest(`.${elementStrings.modal}__inner`)) {
             this.close();
          }
       });
