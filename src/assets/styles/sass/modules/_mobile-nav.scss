@@ -102,7 +102,10 @@
    }
 
    &__submenu-field {
-      padding: 1rem 0;
+      padding: {
+         top: 1rem;
+         bottom: 1rem;
+      }
 
       > a {
          font-weight: 600;
@@ -110,11 +113,17 @@
    }
 
    &__submenu-field-list {
-      padding: 1rem 0;
+      padding: {
+         top: 1rem;
+         bottom: 1rem;
+      }
    }
 
    &__submenu-field-item {
-      padding: 0.5rem 0;
+      padding: {
+         top: 0.5rem;
+         bottom: 0.5rem;
+      }
    }
 
    &__close {
