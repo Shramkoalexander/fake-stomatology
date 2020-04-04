@@ -1,0 +1,26 @@
+.callback-btn {
+   $btnColor: $mainColor;
+   background-color: $btnColor;
+   border-color: $btnColor;
+   color: #fff;
+
+   &:hover {
+      color: #fff;
+      border-color: getDarkerColor($btnColor);
+      background-color: getDarkerColor($btnColor);
+   }
+
+   &--light {
+      $btnColor: #fff;
+      color: $fontColor;
+      background-color: $btnColor;
+      border: 1px solid $btnColor;
+
+      &:hover {
+         color: $fontColor;
+         background-color: #fff;
+         border-color: $btnColor;
+         box-shadow: 0 5px 5px rgba($fontColor, 0.3);
+      }
+   }
+}
