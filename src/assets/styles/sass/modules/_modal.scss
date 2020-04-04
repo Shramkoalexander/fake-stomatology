@@ -1,16 +1,16 @@
 @mixin setThemeColors(
    $themeName,
-   $innerBg,
+   $contentBg,
    $mainTxt,
    $title,
    $closeBtn,
    $closeBtnHover
 ) {
    $themeSelector: if($themeName, '&--' + $themeName, null);
-   #{$themeSelector} &__inner {
+   #{$themeSelector} &__content {
       padding: 3rem 2rem;
       border-radius: 1rem;
-      background-color: $innerBg;
+      background-color: $contentBg;
       color: $mainTxt;
       position: relative;
       box-shadow: 0 90px 90px -60px rgba(0, 0, 0, 0.16);

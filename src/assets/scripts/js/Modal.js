@@ -12,7 +12,7 @@ class Modal {
    events() {
       this.closeModalButton.addEventListener('click', this.close.bind(this));
       this.modal.addEventListener('click', e => {
-         if (!e.target.closest(`.${elementStrings.modal}__inner`)) {
+         if (!e.target.closest(`.${elementStrings.modal}__content`)) {
             this.close();
          }
       });
