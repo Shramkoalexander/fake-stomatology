@@ -32,10 +32,6 @@
          cursor: pointer;
          transition: all $transitionTime;
 
-         &:focus {
-            outline: none;
-         }
-
          &:hover {
             color: #fff;
             background-color: $mainColor;
