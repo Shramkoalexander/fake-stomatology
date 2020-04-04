@@ -6,7 +6,6 @@ class Modal {
       this.modal = document.querySelector(`.${this.name}`);
       this.closeModalButton = document.querySelector(`.${this.name}__close`);
       this.keyPressListener = this.keyPressHandler.bind(this);
-      this.visibleClassName = `${elementStrings.modal}--is-visible`;
    }
 
    events() {
@@ -25,16 +24,18 @@ class Modal {
    }
 
    isOpened() {
-      return this.modal.classList.contains(this.visibleClassName);
+      return this.modal.classList.contains(
+         `${elementStrings.modal}--is-opened`
+      );
    }
 
    open() {
-      this.modal.classList.add(this.visibleClassName);
+      this.modal.classList.add(`${elementStrings.modal}--is-opened`);
       document.addEventListener('keyup', this.keyPressListener);
    }
 
    close() {
-      this.modal.classList.remove(this.visibleClassName);
+      this.modal.classList.remove(`${elementStrings.modal}--is-opened`);
       document.removeEventListener('keyup', this.keyPressListener);
    }
 }
