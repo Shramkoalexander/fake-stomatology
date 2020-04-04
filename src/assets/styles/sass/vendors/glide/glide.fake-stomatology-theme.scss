@@ -1,4 +1,4 @@
-@import 'variables';
+@import '@glidejs/glide/src/assets/sass/variables';
 
 .#{$glide-class} {
    $this: &;
