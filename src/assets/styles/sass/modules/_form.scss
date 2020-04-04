@@ -34,6 +34,10 @@
       @extend %input-field;
       appearance: none;
       box-shadow: 0px 0px 0px 1px $shadowColor inset;
+
+      &::-ms-expand {
+         display: none;
+      }
    }
 
    #{$themeSelector} option {
@@ -59,6 +63,10 @@
       transition: all $transitionTime;
       background-position: right 10px center;
       background-repeat: no-repeat;
+
+      &::-ms-clear {
+         display: none;
+      }
 
       &:focus {
          outline: none;
