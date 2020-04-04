@@ -127,18 +127,13 @@
       height: 0;
 
       padding: {
-         right: 0;
          left: 1rem;
-         top: 0;
-         bottom: 0;
       }
 
       &--is-visible {
          @include isVisible();
 
          padding: {
-            right: 0;
-            left: 1rem;
             top: 2rem;
             bottom: 2rem;
          }
