@@ -184,29 +184,6 @@
       }
    }
 
-   &__services {
-      border-bottom: 1px solid getLighterColor($mainColor, 80%);
-      font-size: $smallFontSize;
-      text-align: left;
-   }
-
-   &__services-list {
-      list-style-type: none;
-      padding: 0;
-   }
-
-   &__services-list-item {
-      margin-bottom: 1rem;
-
-      a {
-         color: $mainFontColor;
-
-         &:hover {
-            color: $mainColor;
-         }
-      }
-   }
-
    &__bottom-section {
       padding: {
          top: 2rem;
@@ -241,6 +218,7 @@
 
       @include atMedium {
          text-align: left;
+         padding-right: 2rem;
       }
    }
 }
