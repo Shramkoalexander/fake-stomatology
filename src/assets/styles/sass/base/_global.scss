@@ -51,3 +51,6 @@ li {
    color: #fff;
 }
 
+:focus {
+   outline-color: rgba($color: $mainColor, $alpha: 0.4);
+}
