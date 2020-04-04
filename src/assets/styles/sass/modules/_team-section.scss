@@ -131,4 +131,16 @@
       opacity: 1;
       height: 30%;
    }
+
+   &__details-btn {
+      $btnColor: $mainColor;
+      background-color: $btnColor;
+      color: #fff;
+
+      &:hover {
+         background-color: #fff;
+         border-color: $btnColor;
+         color: $btnColor;
+      }
+   }
 }

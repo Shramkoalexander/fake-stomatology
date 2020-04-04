@@ -50,6 +50,18 @@
 
    &__submit-btn {
       width: 100%;
+      $btnColor: $accentColor;
+      background-color: $btnColor;
+      border-color: $btnColor;
+      box-shadow: 0 5px 5px rgba($fontColor, 0.3);
+      color: #fff;
+
+      &:hover {
+         background-color: getLighterColor($btnColor);
+         border-color: getLighterColor($btnColor);
+         box-shadow: 0 8px 5px rgba($fontColor, 0.3);
+         color: #fff;
+      }
 
       @include atSmall {
          width: auto;

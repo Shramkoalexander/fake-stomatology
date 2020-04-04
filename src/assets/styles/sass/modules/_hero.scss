@@ -109,7 +109,7 @@
       }
    }
 
-   &__ad-btn {
+   %ad-btn {
       width: 100%;
 
       margin: {
@@ -119,6 +119,35 @@
 
       @include atSmall {
          width: auto;
+      }
+   }
+
+   &__book-btn {
+      @extend %ad-btn;
+      $btnColor: $accentColor;
+      color: #fff;
+      background-color: $btnColor;
+      border-color: $btnColor;
+      box-shadow: 0 5px 5px rgba($fontColor, 0.3);
+
+      &:hover {
+         background-color: getLighterColor($btnColor);
+         border-color: getLighterColor($btnColor);
+         box-shadow: 0 8px 5px rgba($fontColor, 0.3);
+         color: #fff;
+      }
+   }
+
+   &__price-btn {
+      @extend %ad-btn;
+      background-color: rgba($color: #000000, $alpha: 0);
+      border: 1px solid #fff;
+      color: #fff;
+
+      &:hover {
+         background-color: #fff;
+         color: $mainColor;
+         border-color: #fff;
       }
    }
 }

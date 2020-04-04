@@ -66,4 +66,16 @@
    &__full-list-btn-block {
       text-align: center;
    }
+
+   &__details-btn {
+      background-color: $accentColor;
+      color: #fff;
+      border-color: $accentColor;
+
+      &:hover {
+         background-color: rgba($color: #000000, $alpha: 0);
+         border: 1px solid $accentColor;
+         color: $accentColor;
+      }
+   }
 }

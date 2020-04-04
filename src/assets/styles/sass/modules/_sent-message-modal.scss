@@ -11,5 +11,14 @@
 
    &__ok-btn {
       width: 7rem;
+      $btnColor: $successfulColor;
+      background-color: $btnColor;
+      color: #fff;
+      border-color: $btnColor;
+
+      &:hover {
+         background-color: getDarkerColor($btnColor);
+         border: 1px solid $btnColor;
+      }
    }
 }

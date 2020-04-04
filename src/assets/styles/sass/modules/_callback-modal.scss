@@ -12,4 +12,17 @@
    &__phone-block {
       margin-bottom: 2.7rem;
    }
+
+   &__submit {
+      $btnColor: $mainColor;
+      background-color: $btnColor;
+      border-color: $btnColor;
+      color: #fff;
+
+      &:hover {
+         color: #fff;
+         border-color: getDarkerColor($btnColor);
+         background-color: getDarkerColor($btnColor);
+      }
+   }
 }
