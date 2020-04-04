@@ -10,7 +10,7 @@ img {
 a {
    text-decoration: none;
    color: $mainColor;
-   transition: all $mainHoverTransitionTime;
+   transition: all $transitionTime;
    cursor: pointer;
 
    &:hover {
@@ -21,8 +21,8 @@ a {
 body {
    min-width: $XXSmall;
    font-family: 'Rubik', sans-serif;
-   color: $mainFontColor;
-   font-size: $mainFontSize;
+   color: $fontColor;
+   font-size: $mediumFont;
    padding: 0;
    margin: 0;
 }
@@ -32,8 +32,8 @@ button {
    outline: none;
    border: none;
    font-family: inherit;
-   font-size: $mainFontSize;
-   color: $mainFontColor;
+   font-size: $mediumFont;
+   color: $fontColor;
    cursor: pointer;
 }
 

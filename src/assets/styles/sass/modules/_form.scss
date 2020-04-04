@@ -43,7 +43,7 @@
 
 .form {
    %input-field {
-      color: $mainFontColor;
+      color: $fontColor;
       padding: {
          top: 0.89rem;
          right: 2.69rem;
@@ -56,7 +56,7 @@
       border: none;
       outline: none;
       position: relative;
-      transition: all $mainHoverTransitionTime;
+      transition: all $transitionTime;
       background-position: right 10px center;
       background-repeat: no-repeat;
 
@@ -75,5 +75,5 @@
    }
 
    @include setThemeColors(null, transparent);
-   @include setThemeColors('light', $mainOutlineColor);
+   @include setThemeColors('light', $outlineColor);
 }

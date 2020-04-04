@@ -3,7 +3,7 @@
    opacity: 0;
    visibility: hidden;
    position: fixed;
-   background-color: rgba($mainFontColor, 0.5);
+   background-color: rgba($fontColor, 0.5);
    top: 0;
    bottom: 0;
    left: 0;
@@ -25,7 +25,7 @@
    }
 
    &__menu {
-      transition: transform $mainHoverTransitionTime;
+      transition: transform $transitionTime;
       position: relative;
       width: 100%;
       overflow-y: auto;
@@ -45,11 +45,11 @@
    }
 
    &__menu-item {
-      border-bottom: 1px solid $mainOutlineColor;
+      border-bottom: 1px solid $outlineColor;
       position: relative;
 
       &:first-child {
-         border-top: 1px solid $mainOutlineColor;
+         border-top: 1px solid $outlineColor;
       }
 
       > a {
@@ -58,7 +58,7 @@
       }
 
       a {
-         color: $mainFontColor;
+         color: $fontColor;
       }
 
       a:hover {
@@ -73,7 +73,7 @@
    &__arrow-icon {
       position: absolute;
       right: 25px;
-      transition: all $mainHoverTransitionTime;
+      transition: all $transitionTime;
    }
 
    &__menu-item--is-opened &__submenu {
@@ -89,11 +89,11 @@
 
    &__submenu {
       background-color: rgba($color: #000, $alpha: 0.03);
-      border-top: 1px solid $mainOutlineColor;
+      border-top: 1px solid $outlineColor;
       height: 0;
       opacity: 0;
       visibility: hidden;
-      transition: all $mainHoverTransitionTime;
+      transition: all $transitionTime;
 
       padding: {
          left: 2rem;
@@ -123,12 +123,10 @@
       top: 15px;
       right: 15px;
       font-size: 1.5rem;
-      color: $mainOutlineColor;
+      color: $outlineColor;
       cursor: pointer;
       background: none;
-      border: none;
-      outline: none;
-      transition: all $mainHoverTransitionTime;
+      transition: all $transitionTime;
 
       &::after {
          font-family: 'Font Awesome 5 Free';

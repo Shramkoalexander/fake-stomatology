@@ -1,5 +1,5 @@
 .main-menu {
-   font-size: $smallFontSize;
+   font-size: $smallFont;
    font-weight: 400;
    display: flex;
    list-style: none;
@@ -10,12 +10,12 @@
    overflow: hidden;
 
    @include atXLarge {
-      font-size: $mainFontSize;
+      font-size: $mediumFont;
    }
 
    &__item {
       a {
-         color: $mainFontColor;
+         color: $fontColor;
          display: inline-block;
          padding: 1.8rem 1.5rem;
          white-space: nowrap;

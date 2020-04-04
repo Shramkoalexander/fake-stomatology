@@ -7,13 +7,13 @@
    $themeSelector: if($themeName, '&--' + $themeName, null);
    #{$themeSelector} &__comment {
       color: $commentColor;
-      font-size: $smallFontSize;
+      font-size: $smallFont;
       white-space: nowrap;
       margin-bottom: 0.2rem;
    }
 
    #{$themeSelector} &__number {
-      font-size: $largeFontSize;
+      font-size: $largeFont;
       font-weight: 600;
 
       a {
@@ -30,11 +30,6 @@
 .phone-block {
    text-align: right;
 
-   @include setThemeColors(
-      null,
-      $secondaryFontColor,
-      $mainFontColor,
-      $mainColor
-   );
+   @include setThemeColors(null, $secondaryFontColor, $fontColor, $mainColor);
    @include setThemeColors('light', #fff, #fff, rgba(#fff, 0.9));
 }

@@ -30,7 +30,7 @@
    &__text-block {
       max-width: 36rem;
       color: $secondaryFontColor;
-      font-size: $mainFontSize;
+      font-size: $mediumFont;
       text-align: justify;
 
       @include atLarge {

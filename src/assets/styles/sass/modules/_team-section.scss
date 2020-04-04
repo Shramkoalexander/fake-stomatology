@@ -22,10 +22,10 @@
    }
 
    &__team-member {
-      border: 1px solid $mainOutlineColor;
+      border: 1px solid $outlineColor;
       border-radius: 1rem;
       height: 100%;
-      transition: all $mainHoverTransitionTime;
+      transition: all $transitionTime;
       padding: 2rem;
       position: relative;
       overflow: hidden;
@@ -60,14 +60,14 @@
    &__member-content {
       display: flex;
       flex-direction: column;
-      color: $mainFontColor;
+      color: $fontColor;
    }
 
    &__member-fullname {
       margin-bottom: 1rem;
 
       a {
-         color: $mainFontColor;
+         color: $fontColor;
 
          &:hover {
             color: $mainColor;
@@ -96,10 +96,10 @@
 
    &__member-descr {
       color: $secondaryFontColor;
-      border-bottom: 1px solid $mainOutlineColor;
+      border-bottom: 1px solid $outlineColor;
       margin-bottom: 1rem;
       padding-bottom: 1rem;
-      font-size: $smallFontSize;
+      font-size: $smallFont;
    }
 
    &__member-experience {
@@ -124,7 +124,7 @@
          rgba($color: #fff, $alpha: 1) 30%
       );
 
-      transition: all $mainHoverTransitionTime;
+      transition: all $transitionTime;
    }
 
    &__team-member:hover &__show-details-block {

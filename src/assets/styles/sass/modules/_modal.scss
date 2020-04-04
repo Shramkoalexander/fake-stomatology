@@ -23,7 +23,7 @@
 
    #{$themeSelector} &__title {
       margin: 0;
-      font-size: $largeFontSize;
+      font-size: $largeFont;
       color: $title;
       margin-bottom: 1.5rem;
    }
@@ -36,9 +36,7 @@
       color: $closeBtn;
       cursor: pointer;
       background: none;
-      border: none;
-      outline: none;
-      transition: all $mainHoverTransitionTime;
+      transition: all $transitionTime;
 
       &::after {
          font-family: 'Font Awesome 5 Free';
@@ -56,7 +54,7 @@
 .modal {
    position: fixed;
    z-index: -1;
-   background-color: rgba($mainFontColor, 0.5);
+   background-color: rgba($fontColor, 0.5);
    top: 0;
    bottom: 0;
    left: 0;
@@ -67,7 +65,7 @@
    opacity: 0;
    visibility: hidden;
    transform: scale(1.2);
-   transition: all $mainHoverTransitionTime ease-out;
+   transition: all $transitionTime ease-out;
 
    &--is-visible {
       z-index: 200;
@@ -79,18 +77,18 @@
    @include setThemeColors(
       null,
       #fff,
-      $mainFontColor,
+      $fontColor,
       $mainColor,
-      $mainOutlineColor,
+      $outlineColor,
       $mainColor
    );
    @include setThemeColors(dark, $accentColor, #fff, #fff, #fff, #fff);
    @include setThemeColors(
       success,
       #fff,
-      $mainFontColor,
+      $fontColor,
       $successfulColor,
-      $mainOutlineColor,
+      $outlineColor,
       $successfulColor
    );
 }

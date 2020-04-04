@@ -6,7 +6,7 @@
    border-radius: 1rem;
    z-index: 100;
    visibility: hidden;
-   transition: opacity $mainHoverTransitionTime;
+   transition: opacity $transitionTime;
    opacity: 0;
 
    &[data-show] {

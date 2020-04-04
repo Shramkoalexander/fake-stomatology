@@ -1,12 +1,11 @@
 .btn {
-   $btnColor: $mainColor;
-   transition: all $mainHoverTransitionTime;
+   transition: all $transitionTime;
    padding: 0.7rem 1.5rem;
    background-color: $btnColor;
    border-radius: 25px;
    color: #fff;
    text-transform: uppercase;
-   font-size: $smallFontSize;
+   font-size: $smallFont;
    display: inline-block;
    white-space: nowrap;
    outline: none;

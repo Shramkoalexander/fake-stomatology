@@ -27,7 +27,7 @@
    &__subway-list {
       display: flex;
       flex-direction: column;
-      border: 1px solid $mainOutlineColor;
+      border: 1px solid $outlineColor;
       border-radius: 1rem;
       overflow: hidden;
 
@@ -38,9 +38,9 @@
    }
 
    &__subway-list-item {
-      font-size: $mainFontSize;
+      font-size: $mediumFont;
       position: relative;
-      border-bottom: 1px solid $mainOutlineColor;
+      border-bottom: 1px solid $outlineColor;
 
       &--active button {
          color: $mainColor;
@@ -70,7 +70,7 @@
             right: 0;
             top: 50%;
             transform: translateY(-50%);
-            background-color: $mainOutlineColor;
+            background-color: $outlineColor;
          }
 
          &:last-child {
@@ -104,7 +104,7 @@
       }
 
       a {
-         color: $mainFontColor;
+         color: $fontColor;
 
          &:hover {
             text-decoration: underline;
@@ -135,7 +135,7 @@
    }
 
    &__title {
-      font-size: $largeFontSize;
+      font-size: $largeFont;
       margin-bottom: 2rem;
 
       span {

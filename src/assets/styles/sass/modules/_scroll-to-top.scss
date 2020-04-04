@@ -8,17 +8,16 @@
    width: 45px;
    height: 45px;
    overflow: hidden;
-   background-color: $mainOutlineColor;
+   background-color: $outlineColor;
    display: none;
    visibility: hidden;
    opacity: 0;
-   transition: visibility $mainHoverTransitionTime,
-      opacity $mainHoverTransitionTime;
+   transition: visibility $transitionTime, opacity $transitionTime;
 
    a {
       width: 100%;
       height: 100%;
-      color: $mainFontColor;
+      color: $fontColor;
       color: rgba($color: #000, $alpha: 0.5);
       display: flex;
       justify-content: center;

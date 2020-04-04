@@ -2,7 +2,7 @@
 
 @mixin defineSpecSmItem($smName, $smColor) {
    &--#{$smName} {
-      transition: all $mainHoverTransitionTime;
+      transition: all $transitionTime;
       background-color: $smColor;
 
       &:hover {
@@ -20,7 +20,7 @@
       list-style: none;
       width: 2.2rem;
       height: 2.2rem;
-      font-size: $mainFontSize;
+      font-size: $mediumFont;
       margin-right: 0.4rem;
       border-radius: 50%;
       color: #fff;

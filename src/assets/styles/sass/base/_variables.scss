@@ -12,13 +12,13 @@ $mainColor: #1d7cf8;
 $accentColor: #ffc909;
 $errorColor: #ff0909;
 $successfulColor: #34bc34;
-$mainFontColor: color.change($mainColor, $lightness: 10%);
+$fontColor: color.change($mainColor, $lightness: 10%);
 $secondaryFontColor: color.change(
    $mainColor,
    $saturation: 10%,
    $lightness: 55%
 );
-$mainOutlineColor: color.change($mainColor, $saturation: 10%, $lightness: 90%);
+$outlineColor: color.change($mainColor, $saturation: 10%, $lightness: 90%);
 
 $XXSmall: 320px;
 $XSmall: 480px;
@@ -27,8 +27,8 @@ $medium: 768px;
 $large: 992px;
 $XLarge: 1200px;
 
-$mainFontSize: 1rem;
-$smallFontSize: 0.875rem;
-$largeFontSize: 1.25rem;
+$mediumFont: 1rem;
+$smallFont: 0.875rem;
+$largeFont: 1.25rem;
 
-$mainHoverTransitionTime: 0.3s;
+$transitionTime: 0.3s;

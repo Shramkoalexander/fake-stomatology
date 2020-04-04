@@ -86,10 +86,10 @@
       margin-bottom: 0.5rem;
       width: 100%;
       align-self: flex-end;
-      font-size: $smallFontSize;
+      font-size: $smallFont;
 
       @include atLarge {
-         font-size: $mainFontSize;
+         font-size: $mediumFont;
       }
    }
 
@@ -101,7 +101,7 @@
 
       span {
          color: #fff;
-         background-color: $mainFontColor;
+         background-color: $fontColor;
          padding: 0.2rem 0.5rem;
          border-radius: 0.3rem;
          font-size: 1.5rem;
@@ -122,7 +122,7 @@
       color: #fff;
       flex-grow: 1;
       width: 50%;
-      font-size: $smallFontSize;
+      font-size: $smallFont;
 
       padding: {
          top: 1rem;
@@ -135,7 +135,7 @@
 
       @include atLarge {
          width: 50%;
-         font-size: $mainFontSize;
+         font-size: $mediumFont;
       }
    }
 

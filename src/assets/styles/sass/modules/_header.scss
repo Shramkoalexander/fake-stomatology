@@ -5,7 +5,7 @@
    top: 0;
    z-index: 10;
    background-color: #fff;
-   box-shadow: 0 0 33px rgba($mainFontColor, 0.15);
+   box-shadow: 0 0 33px rgba($fontColor, 0.15);
    transform: translateY(-100%);
    transition: all 0.3s;
 
@@ -20,7 +20,7 @@
       }
 
       border: {
-         bottom: 1px solid $mainOutlineColor;
+         bottom: 1px solid $outlineColor;
       }
 
       @include atSmall {
@@ -34,7 +34,7 @@
       padding: 0.3rem 0.6rem;
       outline: none;
       color: $mainColor;
-      font-size: $largeFontSize;
+      font-size: $largeFont;
       cursor: pointer;
 
       &:hover {
@@ -67,7 +67,7 @@
 
    &__our-clinics {
       text-align: right;
-      font-size: $smallFontSize;
+      font-size: $smallFont;
 
       @include atXLarge {
          text-align: center;
@@ -93,7 +93,7 @@
 
    &__phone-icon {
       text-align: right;
-      font-size: $largeFontSize;
+      font-size: $largeFont;
    }
 
    &__top-clbk-block {
@@ -108,7 +108,7 @@
          display: block;
 
          border: {
-            top: 1px solid $mainOutlineColor;
+            top: 1px solid $outlineColor;
          }
       }
    }
