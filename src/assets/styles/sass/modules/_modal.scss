@@ -67,8 +67,7 @@
    transform: scale(1.2);
    transition: all $transitionTime ease-out;
 
-   &--is-visible {
-      z-index: 200;
+      z-index: $modal;
       opacity: 1;
       visibility: visible;
       transform: scale(1);

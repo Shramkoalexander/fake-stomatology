@@ -20,7 +20,7 @@
    }
 
    &--opened {
-      z-index: 9;
+      z-index: $menuDropdown;
       position: fixed;
       opacity: 1;
       visibility: visible;

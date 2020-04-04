@@ -11,7 +11,7 @@
    transition: all 0.35s;
 
    &--is-opened {
-      z-index: 100;
+      z-index: $modal;
       opacity: 1;
       visibility: visible;
    }
