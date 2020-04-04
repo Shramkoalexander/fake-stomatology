@@ -1,3 +1,4 @@
+import './polyfills';
 import Glide from '@glidejs/glide';
 import breakpoints from './breakpoints';
 import CallbackModal from './CallbackModal';
