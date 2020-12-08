@@ -133,14 +133,14 @@
    }
 
    &__details-btn {
-      $btnColor: $mainColor;
-      background-color: $btnColor;
-      color: #fff;
+      background-color: #fff;
+      color: $mainColor;
+      border-color: $mainColor;
 
       &:hover {
-         background-color: #fff;
-         border-color: $btnColor;
-         color: $btnColor;
+         background-color: $mainColor;
+         border: 1px solid $mainColor;
+         color: #fff;
       }
    }
 }
