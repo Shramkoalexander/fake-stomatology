@@ -20,19 +20,21 @@ block content
             .glide.glide--offers
                .glide__track(data-glide-el='track')
                   .glide__slides
-                     each offer in offers
-                        .glide__slide 
-                           .offers-section__special-offer
+                     each offer, index in offers
+                        .glide__slide
+                           a.offers-section__special-offer(
+                              class=`offers-section__special-offer--${index}`
+                           )
                               .offers-section__offer-image(
-                                 class=`offers-section__offer-image--${offer.alias}`
-                              ) 
+                                 style=`background-image: url("./assets/images/offers/offer_${index}.jpg");`
+                              )
                               .offers-section__offer-content
                                  .offers-section__offer-title= offer.title
                                  .offers-section__old-offer #{offer.oldOffer} &#8381;
                                  .offers-section__new-offer #[span #{offer.newOffer} &#8381;]
                                  .offers-section__expiration-date #[i.far.fa-calendar-alt.offers-section__calendar-icon] Акция действует до #{offer.expirationDate}
                                  .offers-section__btn-block 
-                                    a.offers-section__btn.btn.btn--big Подробнее
+                                    .offers-section__btn.btn.btn--big Подробнее
                .glide__arrows(data-glide-el='controls')
                   button.glide__arrow.glide__arrow--left(data-glide-dir='<') #[i.fas.fa-chevron-left]
                   button.glide__arrow.glide__arrow--right(data-glide-dir='>') #[i.fas.fa-chevron-right]
