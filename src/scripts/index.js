@@ -1,9 +1,9 @@
-import './polyfills';
+import './base/polyfills';
 import Glide from '@glidejs/glide';
-import breakpoints from './breakpoints';
-import CallbackModal from './CallbackModal';
-import BookAppointmentForm from './BookAppointmentForm';
-import MapBlock from './MapBlock';
+import breakpoints from './base/breakpoints';
+import CallbackModal from './modal-modules/CallbackModal';
+import BookAppointmentForm from './form-modules/BookAppointmentForm';
+import MapBlock from './map-modules/MapBlock';
 import FooterToggle from './FooterToggle';
 import HidingHeader from './HidingHeader';
 import MobileNav from './MobileNav';

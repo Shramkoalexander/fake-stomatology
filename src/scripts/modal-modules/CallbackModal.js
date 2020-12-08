@@ -1,4 +1,4 @@
-import CallbackForm from './CallbackForm';
+import CallbackForm from '../form-modules/CallbackForm';
 import Modal from './Modal';
 
 class CallbackModal extends Modal {

@@ -1,4 +1,4 @@
-import SentMessageModal from './SentMessageModal';
+import SentMessageModal from '../modal-modules/SentMessageModal';
 
 class Form {
    constructor() {

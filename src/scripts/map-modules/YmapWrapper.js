@@ -1,5 +1,5 @@
 import ymaps from 'ymaps';
-import EventEmitter from './EventEmitter';
+import EventEmitter from '../EventEmitter';
 
 export default class YmapWrapper extends EventEmitter {
    constructor(tagContainerId, centerCoord) {
