@@ -1,0 +1,20 @@
+{
+   "arrowParens": "avoid",
+   "tabWidth": 3,
+   "trailingComma": "es5",
+   "singleQuote": true,
+   "bracketSpacing": true,
+   "semi": true,
+   "quoteProps": "as-needed",
+   "proseWrap": "preserve",
+   "htmlWhitespaceSensitivity": "css",
+   "endOfLine": "auto",
+   "overrides": [
+      {
+         "files": "*.pug",
+         "options": {
+            "printWidth": 100
+         }
+      }
+   ]
+}
