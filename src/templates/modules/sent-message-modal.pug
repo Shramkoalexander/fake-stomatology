@@ -1,8 +1,15 @@
-extends modal
+extends ../layout/modal
 block variables
    - var modalTitle = "Ваша заявка отправлена";
    - var modalTheme = "modal--success";
    - var modalClass = "sent-message-modal";
+block image
+   img.sent-message-modal__image(
+      src=`./assets/images/message-sent.svg`,
+      width='150',
+      height='150',
+      alt='сообщение отправлено'
+   ) 
 block content
    .sent-message-modal__text.
       Мы свяжемся с вами в ближайшее время

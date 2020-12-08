@@ -1,4 +1,17 @@
 .sent-message-modal {
+   &__image {
+      display: none;
+      width: 150px;
+      height: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2rem;
+
+      @include atSmall {
+         display: block;
+      }
+   }
+
    &__text {
       margin-bottom: 1.5rem;
       font-size: $smallFont;

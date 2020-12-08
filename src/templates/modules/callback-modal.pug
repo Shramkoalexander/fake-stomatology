@@ -1,8 +1,15 @@
-extends modal
+extends ../layout/modal
 block variables
    - var modalTitle = "Закажите обратный звонок";
    - var modalTheme = "";
    - var modalClass = "callback-modal";
+block image
+   img.callback-modal__image(
+      src=`./assets/images/callback.svg`,
+      width='150',
+      height='150',
+      alt='мы вам перезвоним'
+   ) 
 block content
    .callback-modal__text Оставьте номер телефона и мы перезвоним вам в течение минуты
    #callback-modal__form.form.form--light.callback-modal__form
