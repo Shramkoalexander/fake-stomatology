@@ -24,11 +24,9 @@ class Form {
    }
 
    validateForm() {
-      const validityStates = this.fields.map(field => field.validate());
-      const isValid = validityStates.reduce(
-         (accumulator, state) => accumulator && state,
-         true
-      );
+      const isValid = this.fields
+         .map(field => field.validate())
+         .every(isFieldValid => isFieldValid);
 
       if (isValid) {
          this.clearFields();
