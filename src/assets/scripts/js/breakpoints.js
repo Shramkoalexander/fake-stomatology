@@ -9,12 +9,12 @@ function getBreakpoint(bpTitle) {
 }
 
 const breakpoints = {
-   XXSmall: getBreakpoint('XXSmall') || 320,
-   XSmall: getBreakpoint('XSmall') || 480,
-   small: getBreakpoint('small') || 600,
-   medium: getBreakpoint('medium') || 768,
-   large: getBreakpoint('large') || 992,
-   XLarge: getBreakpoint('XLarge') || 1200,
+   XXSmall: getBreakpoint('XXSmall'),
+   XSmall: getBreakpoint('XSmall'),
+   small: getBreakpoint('small'),
+   medium: getBreakpoint('medium'),
+   large: getBreakpoint('large'),
+   XLarge: getBreakpoint('XLarge'),
 };
 
 export default breakpoints;
