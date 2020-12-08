@@ -1,4 +1,4 @@
-
+import { getCoordinates } from './utils';
 import YmapWrapper from './YmapWrapper';
 
 export default class MapBlock {
@@ -37,7 +37,7 @@ export default class MapBlock {
       // create map placemarks
       this.allOfficeDescriptions.forEach(item => {
          const id = item.getAttribute('id');
-         const coordinates = MapBlock.getCoordinates(id);
+         const coordinates = getCoordinates(id);
          this.yMap.createPlacemark(coordinates, id);
       });
 
@@ -90,15 +90,6 @@ export default class MapBlock {
    showOffice(id) {
       this.showContactDescription(id);
       this.highlightSubwayButton(id);
-      this.currentCoordinates = MapBlock.getCoordinates(id);
-   }
-
-   static getCoordinates(id) {
-      const officeDescription = document.querySelector(`#${id}`);
-      const coordinatesRaw = officeDescription.dataset.coord;
-      const coordinates = coordinatesRaw
-         .split(',')
-         .map(coordanate => parseFloat(coordanate));
-      return coordinates;
+      this.currentCoordinates = getCoordinates(id);
    }
 }
