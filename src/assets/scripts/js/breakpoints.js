@@ -4,6 +4,11 @@ const breakpointCSS = window.getComputedStyle(
 
 function getBreakpoint(bpTitle) {
    const rawValue = breakpointCSS.getPropertyValue(`--${bpTitle}`);
+   if (!rawValue) {
+      console.error(`can't find ${bpTitle} breakpoint`);
+      return undefined;
+   }
+
    const value = parseInt(rawValue, 10);
    return value;
 }
