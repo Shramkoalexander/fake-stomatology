@@ -1,15 +1,12 @@
 import SmoothScroll from 'smooth-scroll';
-import { elements, elementStrings } from './base';
 
 export default class SmoothScrollHandler {
    constructor() {
       this.scroll = new SmoothScroll('a[href*="#"]', {
          speed: 200,
       });
-      this.firstNameInput = elements.firstNameInput;
-      this.baSection = document.querySelector(
-         `#${elementStrings.bookAppointmentSection}`
-      );
+      this.firstNameInput = document.querySelector('#ba-fname');
+      this.baSection = document.querySelector('#book-appointment-section');
 
       this.events();
    }

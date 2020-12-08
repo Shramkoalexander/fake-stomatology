@@ -1,21 +1,18 @@
-import { elementStrings, elements } from './base';
-
 export default class MobileNav {
    constructor() {
-      this.mobileNav = document.querySelector(`.${elementStrings.mobileNav}`);
-      this.menuButton = elements.headerMenuButton;
-      this.closeButton = document.querySelector(
-         `.${elementStrings.mobileNav}__close`
+      const headerMenuButtonElement = document.querySelector(
+         '.header__menu-button'
       );
-      this.servicesItem = document.querySelector(
-         `#${elementStrings.headerMobileMenuServices} > a`
-      );
+      this.mobileNav = document.querySelector('.mobile-nav');
+      this.menuButton = headerMenuButtonElement;
+      this.closeButton = document.querySelector('.mobile-nav__close');
+      this.servicesItem = document.querySelector('#mobile-menu-services > a');
       this.events();
    }
 
    events() {
       this.mobileNav.addEventListener('click', e => {
-         if (!e.target.closest(`.${elementStrings.mobileNav}__menu`)) {
+         if (!e.target.closest('.mobile-nav__menu')) {
             this.close();
          }
       });
@@ -30,8 +27,8 @@ export default class MobileNav {
 
       this.servicesItem.addEventListener('click', () => {
          document
-            .querySelector(`#${elementStrings.headerMobileMenuServices}`)
-            .classList.toggle(`${elementStrings.mobileNavItem}--is-opened`);
+            .querySelector('#mobile-menu-services')
+            .classList.toggle('mobile-nav__menu-item--is-opened');
       });
 
       window.addEventListener('resize', () => {
@@ -40,11 +37,7 @@ export default class MobileNav {
             .getPropertyValue('display');
 
          if (displayProperty === 'none') {
-            if (
-               this.mobileNav.classList.contains(
-                  `${elementStrings.mobileNav}--is-opened`
-               )
-            ) {
+            if (this.mobileNav.classList.contains('mobile-nav--is-opened')) {
                this.close();
             }
          }
@@ -52,36 +45,26 @@ export default class MobileNav {
    }
 
    close() {
-      if (
-         this.mobileNav.classList.contains(
-            `${elementStrings.mobileNav}--is-opened`
-         )
-      ) {
-         this.mobileNav.classList.remove(
-            `${elementStrings.mobileNav}--is-opened`
-         );
+      if (this.mobileNav.classList.contains('mobile-nav--is-opened')) {
+         this.mobileNav.classList.remove('mobile-nav--is-opened');
       }
 
       if (
          document
-            .querySelector(`#${elementStrings.headerMobileMenuServices}`)
-            .classList.contains(`${elementStrings.mobileNavItem}--is-opened`)
+            .querySelector('#mobile-menu-services')
+            .classList.contains('mobile-nav__menu-item--is-opened')
       ) {
          document
-            .querySelector(`#${elementStrings.headerMobileMenuServices}`)
-            .classList.remove(`${elementStrings.mobileNavItem}--is-opened`);
+            .querySelector('#mobile-menu-services')
+            .classList.remove('mobile-nav__menu-item--is-opened');
       }
 
       document.body.style.overflow = 'visible';
    }
 
    open() {
-      if (
-         !this.mobileNav.classList.contains(
-            `${elementStrings.mobileNav}--is-opened`
-         )
-      ) {
-         this.mobileNav.classList.add(`${elementStrings.mobileNav}--is-opened`);
+      if (!this.mobileNav.classList.contains('mobile-nav--is-opened')) {
+         this.mobileNav.classList.add('mobile-nav--is-opened');
          document.body.style.overflow = 'hidden';
       }
    }

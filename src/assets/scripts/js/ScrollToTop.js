@@ -1,10 +1,6 @@
-import { elementStrings } from './base';
-
 export default class ScrollToTop {
    constructor() {
-      this.scrollToTop = document.querySelector(
-         `.${elementStrings.scrollToTop}`
-      );
+      this.scrollToTop = document.querySelector('.scroll-to-top');
       this.revealOffset = 600;
       this.events();
    }
@@ -12,13 +8,9 @@ export default class ScrollToTop {
    events() {
       document.addEventListener('scroll', () => {
          if (window.pageYOffset >= this.revealOffset) {
-            this.scrollToTop.classList.add(
-               `${elementStrings.scrollToTop}--is-visible`
-            );
+            this.scrollToTop.classList.add('scroll-to-top--is-visible');
          } else {
-            this.scrollToTop.classList.remove(
-               `${elementStrings.scrollToTop}--is-visible`
-            );
+            this.scrollToTop.classList.remove('scroll-to-top--is-visible');
          }
       });
    }

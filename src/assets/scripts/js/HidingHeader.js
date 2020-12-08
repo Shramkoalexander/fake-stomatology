@@ -1,8 +1,7 @@
-import { elements, elementStrings } from './base';
-
 export default class HidingHeader {
    constructor() {
-      this.header = elements.header;
+      const headerElement = document.querySelector('header');
+      this.header = headerElement;
       this.pageOffset = window.pageYOffset;
       this.directionCount = 0;
       this.headerHeight = this.header.clientHeight;
@@ -28,9 +27,7 @@ export default class HidingHeader {
                this.directionCount > this.minOffsetDown &&
                window.pageYOffset > this.headerHeight
             ) {
-               this.header.classList.remove(
-                  `${elementStrings.header}--is-visible`
-               );
+               this.header.classList.remove('header--is-visible');
             }
          } else {
             this.upDirection = true;
@@ -43,12 +40,8 @@ export default class HidingHeader {
                this.directionCount > this.minOffsetUp ||
                window.pageYOffset <= this.headerHeight
             ) {
-               this.header.classList.remove(
-                  `${elementStrings.header}--is-visible`
-               );
-               this.header.classList.add(
-                  `${elementStrings.header}--is-visible`
-               );
+               this.header.classList.remove('header--is-visible');
+               this.header.classList.add('header--is-visible');
             }
          }
          this.pageOffset = window.pageYOffset;

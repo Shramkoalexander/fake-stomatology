@@ -1,14 +1,11 @@
 import CallbackForm from './CallbackForm';
 import Modal from './Modal';
-import { elementStrings } from './base';
 
 class CallbackModal extends Modal {
    constructor(name) {
       super(name);
       this.callbackForm = new CallbackForm();
-      this.triggerButtons = document.querySelectorAll(
-         `.${elementStrings.callbackBtn}`
-      );
+      this.triggerButtons = document.querySelectorAll('.callback-btn');
       this.events();
    }
 

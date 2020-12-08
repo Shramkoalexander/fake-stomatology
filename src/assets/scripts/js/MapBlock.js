@@ -1,4 +1,4 @@
-import { elementStrings } from './base';
+
 import YmapWrapper from './YmapWrapper';
 
 export default class MapBlock {
@@ -9,11 +9,11 @@ export default class MapBlock {
       this.activeSubwayButton = null;
 
       this.allOfficeDescriptions = document.querySelectorAll(
-         `.${elementStrings.officeDescriptionContent}`
+         '.map-block__descr-content'
       );
 
       this.allSubwayButtons = document.querySelectorAll(
-         `.${elementStrings.subwayListItem}`
+         '.map-block__subway-list-item'
       );
 
       this.init();
@@ -21,9 +21,7 @@ export default class MapBlock {
 
    async init() {
       // show initial office
-      const initOffice = document.querySelector(
-         `.${elementStrings.officeDescriptionContent}`
-      );
+      const initOffice = document.querySelector('.map-block__descr-content');
       const initID = initOffice.getAttribute('id');
 
       this.showOffice(initID);
@@ -47,7 +45,7 @@ export default class MapBlock {
       this.allSubwayButtons.forEach(subwayButton => {
          subwayButton.addEventListener('click', e => {
             const targetButton = e.target.closest(
-               `.${elementStrings.subwayListItem}`
+               '.map-block__subway-list-item'
             );
             const officeId = targetButton.dataset.officeToShow;
             this.showOffice(officeId);
@@ -58,26 +56,24 @@ export default class MapBlock {
 
    deactivateSubwayButtons() {
       this.allSubwayButtons.forEach(subwayButton => {
-         subwayButton.classList.remove(
-            `${elementStrings.subwayListItem}--active`
-         );
+         subwayButton.classList.remove('map-block__subway-list-item--active');
       });
    }
 
    highlightSubwayButton(id) {
       this.deactivateSubwayButtons();
       this.activeSubwayButton = document.querySelector(
-         `.${elementStrings.subwayListItem}[data-office-to-show="${id}"]`
+         `.map-block__subway-list-item[data-office-to-show="${id}"]`
       );
       this.activeSubwayButton.classList.add(
-         `${elementStrings.subwayListItem}--active`
+         'map-block__subway-list-item--active'
       );
    }
 
    hideAllDescriptions() {
       this.allOfficeDescriptions.forEach(officeDescription => {
          officeDescription.classList.remove(
-            `${elementStrings.officeDescriptionContent}--is-visible`
+            'map-block__descr-content--is-visible'
          );
       });
    }
@@ -87,7 +83,7 @@ export default class MapBlock {
       this.currentOfficeDescription = document.querySelector(`#${id}`);
       this.currentId = id;
       this.currentOfficeDescription.classList.add(
-         `${elementStrings.officeDescriptionContent}--is-visible`
+         'map-block__descr-content--is-visible'
       );
    }
 

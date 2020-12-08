@@ -1,16 +1,22 @@
-import { elements } from './base';
 import Form from './Form';
 import FieldFactory from './FieldFactory';
 
 class CallbackForm extends Form {
    constructor() {
       super();
+      const modalPhoneInputElement = document.querySelector(
+         '#callback-modal-phone'
+      );
+      const modalSubmitBtnElement = document.querySelector(
+         '#callback-modal-submit'
+      );
+
       this.phone = FieldFactory.create(
-         elements.modalPhoneInput,
+         modalPhoneInputElement,
          FieldFactory.types.phone
       );
       this.fields.push(this.phone);
-      this.submitBtn = elements.modalSubmitBtn;
+      this.submitBtn = modalSubmitBtnElement;
    }
 }
 

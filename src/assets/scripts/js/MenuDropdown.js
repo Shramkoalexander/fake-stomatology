@@ -1,29 +1,29 @@
-import { elements, elementStrings } from './base';
-
 export default class MenuDropdown {
    constructor() {
-      this.header = elements.header;
-      this.headerHeight = this.header.clientHeight;
-      this.dropdown = document.querySelector(
-         `.${elementStrings.headerDropdown}`
+      const headerElement = document.querySelector('header');
+      const headerMenuServicesElement = document.querySelector(
+         '#menu-services'
       );
+      this.header = headerElement;
+      this.headerHeight = this.header.clientHeight;
+      this.dropdown = document.querySelector('.header-menu-dropdown');
       this.dropdown.style.top = `${this.headerHeight}px`;
-      this.menuServices = elements.headerMenuServices;
+      this.menuServices = headerMenuServicesElement;
       this.events();
    }
 
    events() {
       document
-         .querySelector(`.${elementStrings.headerOurClinics}`)
+         .querySelector('.header__our-clinics')
          .addEventListener('click', e => {
             if (
                e.target.closest(
-                  `.${elementStrings.headerClinicsCount}, .${elementStrings.headerClinicsPinIcon}`
+                  '.header__clinics-count, .header__clinics-pin-icon'
                )
             ) {
                if (
                   this.dropdown.classList.contains(
-                     `${elementStrings.headerDropdown}--opened`
+                     'header-menu-dropdown--opened'
                   )
                ) {
                   this.close();
@@ -38,9 +38,7 @@ export default class MenuDropdown {
 
          if (displayProperty === 'none') {
             if (
-               this.dropdown.classList.contains(
-                  `${elementStrings.headerDropdown}--opened`
-               )
+               this.dropdown.classList.contains('header-menu-dropdown--opened')
             ) {
                this.close();
             }
@@ -54,11 +52,7 @@ export default class MenuDropdown {
 
       this.menuServices.addEventListener('click', e => {
          e.preventDefault();
-         if (
-            this.dropdown.classList.contains(
-               `${elementStrings.headerDropdown}--opened`
-            )
-         ) {
+         if (this.dropdown.classList.contains('header-menu-dropdown--opened')) {
             this.close();
          } else {
             this.open();
@@ -67,20 +61,14 @@ export default class MenuDropdown {
    }
 
    close() {
-      this.dropdown.classList.remove(
-         `${elementStrings.headerDropdown}--opened`
-      );
+      this.dropdown.classList.remove('header-menu-dropdown--opened');
       document.body.style.overflow = 'visible';
-      elements.headerMenuServices.classList.remove(
-         `${elementStrings.mainMenuItem}--active`
-      );
+      this.menuServices.classList.remove('main-menu__item--active');
    }
 
    open() {
-      this.dropdown.classList.add(`${elementStrings.headerDropdown}--opened`);
+      this.dropdown.classList.add('header-menu-dropdown--opened');
       document.body.style.overflow = 'hidden';
-      elements.headerMenuServices.classList.add(
-         `${elementStrings.mainMenuItem}--active`
-      );
+      this.menuServices.classList.add('main-menu__item--active');
    }
 }

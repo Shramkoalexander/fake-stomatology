@@ -1,12 +1,8 @@
-import { elementStrings } from './base';
-
 export default class FooterToggle {
    constructor() {
-      this.toggle = document.querySelector(`.${elementStrings.footerToggle}`);
+      this.toggle = document.querySelector('.footer__other-list-toggle');
 
-      this.footerLinkList = document.querySelector(
-         `.${elementStrings.footerLinkList}`
-      );
+      this.footerLinkList = document.querySelector('.footer__other-link-list');
 
       this.events();
    }
@@ -18,21 +14,19 @@ export default class FooterToggle {
             .getPropertyValue('display');
 
          if (displayProperty === 'none') {
-            this.toggle.classList.remove(
-               `${elementStrings.footerToggle}--opened`
-            );
+            this.toggle.classList.remove('footer__other-list-toggle--opened');
 
             this.footerLinkList.classList.remove(
-               `${elementStrings.footerLinkList}--is-visible`
+               'footer__other-link-list--is-visible'
             );
          }
       });
 
       this.toggle.addEventListener('click', e => {
-         e.target.classList.toggle(`${elementStrings.footerToggle}--opened`);
+         e.target.classList.toggle('footer__other-list-toggle--opened');
 
          this.footerLinkList.classList.toggle(
-            `${elementStrings.footerLinkList}--is-visible`
+            'footer__other-link-list--is-visible'
          );
       });
    }

@@ -1,24 +1,33 @@
-import { elements } from './base';
 import FieldFactory from './FieldFactory';
 import Form from './Form';
 
 class BookAppointmentForm extends Form {
    constructor() {
       super();
+      const firstNameInputElement = document.querySelector('#ba-fname');
+      const phoneInputElement = document.querySelector('#ba-phone');
+      const callbackTimeSelectElement = document.querySelector(
+         '#ba-callback-time'
+      );
+      const officeAddressSelectElement = document.querySelector(
+         '#ba-office-address'
+      );
+      const submitBtnElement = document.querySelector('#ba-submit');
+
       this.name = FieldFactory.create(
-         elements.firstNameInput,
+         firstNameInputElement,
          FieldFactory.types.name
       );
       this.phone = FieldFactory.create(
-         elements.phoneInput,
+         phoneInputElement,
          FieldFactory.types.phone
       );
       this.callBackTime = FieldFactory.create(
-         elements.callbackTimeSelect,
+         callbackTimeSelectElement,
          FieldFactory.types.selectOption
       );
       this.officeAddress = FieldFactory.create(
-         elements.officeAddressSelect,
+         officeAddressSelectElement,
          FieldFactory.types.selectOption
       );
 
@@ -29,7 +38,7 @@ class BookAppointmentForm extends Form {
          this.officeAddress
       );
 
-      this.submitBtn = elements.submitBtn;
+      this.submitBtn = submitBtnElement;
       this.events();
    }
 

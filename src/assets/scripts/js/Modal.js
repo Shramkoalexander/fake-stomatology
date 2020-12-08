@@ -1,5 +1,3 @@
-import { elementStrings } from './base';
-
 class Modal {
    constructor(name) {
       this.name = name;
@@ -11,7 +9,7 @@ class Modal {
    events() {
       this.closeModalButton.addEventListener('click', this.close.bind(this));
       this.modal.addEventListener('click', e => {
-         if (!e.target.closest(`.${elementStrings.modal}__content`)) {
+         if (!e.target.closest('.modal__content')) {
             this.close();
          }
       });
@@ -24,18 +22,16 @@ class Modal {
    }
 
    isOpened() {
-      return this.modal.classList.contains(
-         `${elementStrings.modal}--is-opened`
-      );
+      return this.modal.classList.contains('modal--is-opened');
    }
 
    open() {
-      this.modal.classList.add(`${elementStrings.modal}--is-opened`);
+      this.modal.classList.add('modal--is-opened');
       document.addEventListener('keyup', this.keyPressListener);
    }
 
    close() {
-      this.modal.classList.remove(`${elementStrings.modal}--is-opened`);
+      this.modal.classList.remove('modal--is-opened');
       document.removeEventListener('keyup', this.keyPressListener);
    }
 }
