@@ -46,8 +46,14 @@ block content
                                  .offers-section__btn-block 
                                     .offers-section__btn.btn.btn--big Подробнее
                .glide__arrows(data-glide-el='controls')
-                  button.glide__arrow.glide__arrow--left(data-glide-dir='<') #[i.fas.fa-chevron-left]
-                  button.glide__arrow.glide__arrow--right(data-glide-dir='>') #[i.fas.fa-chevron-right]
+                  button.glide__arrow.glide__arrow--left(
+                     data-glide-dir='<',
+                     aria-label='Стрелка влево'
+                  ) #[i.fas.fa-chevron-left]
+                  button.glide__arrow.glide__arrow--right(
+                     data-glide-dir='>',
+                     aria-label='Стрелка вправо'
+                  ) #[i.fas.fa-chevron-right]
    section.services-section.page-section
       .wrapper
          .heading-block 
@@ -121,8 +127,14 @@ block content
                               .team-section__show-details-block 
                                  a.team-section__details-btn.btn(href='/') Подробнее о враче
                .glide__arrows(data-glide-el='controls')
-                  button.glide__arrow.glide__arrow--left(data-glide-dir='<') #[i.fas.fa-chevron-left]
-                  button.glide__arrow.glide__arrow--right(data-glide-dir='>') #[i.fas.fa-chevron-right]
+                  button.glide__arrow.glide__arrow--left(
+                     data-glide-dir='<',
+                     aria-label='Стрелка влево'
+                  ) #[i.fas.fa-chevron-left]
+                  button.glide__arrow.glide__arrow--right(
+                     data-glide-dir='>',
+                     aria-label='Стрелка вправо'
+                  ) #[i.fas.fa-chevron-right]
    section#book-appointment-section.book-appointment-section.page-section
       .wrapper
          .book-appointment-section__content
@@ -137,7 +149,8 @@ block content
                               name='ba-fname',
                               type='text',
                               placeholder='Ваше имя *',
-                              autocomplete='off'
+                              autocomplete='off',
+                              aria-label='Ваше имя'
                            )
                      .row__col-smallest-12.row__col-S-6 
                         .book-appointment-section__phone-block
@@ -145,12 +158,16 @@ block content
                               name='ba-phone',
                               type='tel',
                               placeholder='Ваш номер телефона *',
-                              autocomplete='off'
+                              autocomplete='off',
+                              aria-label='Ваш номер телефона'
                            )
                   .row.row--wrap 
                      .row__col-smallest-12.row__col-S-6 
                         .book-appointment-section__callback-time-block
-                           select#ba-callback-time(name='ba-callback-time')
+                           select#ba-callback-time(
+                              name='ba-callback-time',
+                              aria-label='Время для звонка'
+                           )
                               option(value='') -- Время для звонка --
                               option(value='9:00-11:00') 9:00 - 11:00
                               option(value='11:00-13:00') 11:00 - 13:00
@@ -159,7 +176,10 @@ block content
                               option(value='20:00-22:00') 20:00 - 22:00
                      .row__col-smallest-12.row__col-S-6 
                         .book-appointment-section__office-address-block
-                           select#ba-office-address(name='ba-office-address')
+                           select#ba-office-address(
+                              name='ba-office-address',
+                              aria-label='Адрес клиники'
+                           )
                               option(value='') -- Адрес клиники --
                               each office in offices 
                                  option(value=office.subway) Клиника м. #{office.subway}
