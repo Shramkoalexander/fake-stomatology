@@ -69,7 +69,7 @@ function scripts(cb) {
 
 function processHTMLTemplates() {
    return gulp
-      .src('./src/templates/**/index.pug')
+      .src(['./src/templates/index.pug', './src/templates/404.pug'])
       .pipe(pug())
       .pipe(prettier()) // may remove this at production
       .pipe(gulp.dest('./.tmp/'));
