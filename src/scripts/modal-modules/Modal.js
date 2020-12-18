@@ -8,11 +8,15 @@ class Modal {
 
    events() {
       this.closeModalButton.addEventListener('click', this.close.bind(this));
-      this.modal.addEventListener('click', e => {
-         if (!e.target.closest('.modal__content')) {
-            this.close();
-         }
-      });
+      this.modal.addEventListener(
+         'click',
+         e => {
+            if (!e.target.closest('.modal__content')) {
+               this.close();
+            }
+         },
+         true
+      );
    }
 
    keyPressHandler(e) {
