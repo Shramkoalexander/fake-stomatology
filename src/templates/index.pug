@@ -25,9 +25,18 @@ block content
                            a.offers-section__special-offer(
                               class=`offers-section__special-offer--${index}`
                            )
-                              .offers-section__offer-image(
-                                 style=`background-image: url("./assets/images/offers/offer_${index}.jpg");`
-                              )
+                              .offers-section__offer-image-wrapper
+                                 picture
+                                    source(
+                                       type='image/webp',
+                                       srcset=`./assets/images/offers/offer_${index}.webp 650w, ./assets/images/offers/offer-hi-dpi_${index}.webp 1300w`,
+                                       sizes='650px'
+                                    )
+                                    img.offers-section__offer-image(
+                                       srcset=`./assets/images/offers/offer_${index}.jpg 650w, ./assets/images/offers/offer-hi-dpi_${index}.jpg 1300w`,
+                                       sizes='650px',
+                                       alt='Специальное предложение'
+                                    )
                               .offers-section__offer-content
                                  .offers-section__offer-title= offer.title
                                  .offers-section__old-offer #{offer.oldOffer} &#8381;
@@ -67,7 +76,19 @@ block content
                      p Мы исповедуем комплексный подход к клиентам и всегда действуем с полным учетом всех их потребностей и предложений. Это позволяет нам добиваться потрясающих успехов в лечении и гарантирует результат, который соответствует ожиданиям нашего клиента и его пожеланиям.
                      p Доверьте свои зубы профессионалам стоматологической клиники «Den's Dent».
                .row__col-smallest-12.row__col-L-5.row__col-XL-5
-                  .about-us-section__image
+                  .about-us-section__image-wrapper
+                     picture
+                        source(
+                           type='image/webp',
+                           srcset='./assets/images/about-us.webp 600w, ./assets/images/about-us-hi-dpi.webp 1200w',
+                           sizes='600px'
+                        )
+                        img.about-us-section__image(
+                           srcset='./assets/images/about-us.jpg 600w, ./assets/images/about-us-hi-dpi.jpg 1200w',
+                           sizes='600px',
+                           alt='О нас'
+                        )
+
    section.team-section.page-section
       .wrapper
          .heading-block 
@@ -80,11 +101,18 @@ block content
                      each member in teamMembers
                         .glide__slide 
                            .team-section__team-member
-                              .team-section__member-portrait
-                                 img(
-                                    src=`./assets/images/team/${member.imgName}.jpg`,
-                                    alt='Портрет врача'
-                                 )
+                              .team-section__member-image-wrapper
+                                 picture
+                                    source(
+                                       type='image/webp',
+                                       srcset=`./assets/images/team/${member.imgName}_01.webp 300w, ./assets/images/team/${member.imgName}-hi-dpi_01.webp 600w`,
+                                       sizes='300px'
+                                    )
+                                    img.team-section__member-image(
+                                       srcset=`./assets/images/team/${member.imgName}_01.jpg 300w, ./assets/images/team/${member.imgName}-hi-dpi_01.jpg 600w`,
+                                       sizes='300px',
+                                       alt='Портрет врача'
+                                    )
                               .team-section__member-content
                                  .team-section__member-fullname: a #[span.team-section__member-surname= member.surName] #[span.team-section__name-n-patronymic= member.namePatronymic]
                                  .team-section__member-descr= member.descr

@@ -34,13 +34,20 @@
       background-color: #02c39a;
    }
 
+   &__offer-image-wrapper {
+      height: 100%;
+      display: none;
+
+      @include atMedium {
+         display: block;
+      }
+   }
+
    &__offer-image {
       width: 650px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 50% 50%;
-      position: relative;
-      align-self: stretch;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
    }
 
    &__offer-image-bg-rounding {

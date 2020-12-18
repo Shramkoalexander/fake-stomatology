@@ -35,25 +35,25 @@
       }
    }
 
-   &__member-portrait {
+   &__member-image-wrapper {
       margin-bottom: 1rem;
+   }
 
-      img {
-         width: 300px;
-         display: block;
+   &__member-image {
+      width: 300px;
+      display: block;
 
-         margin: {
-            left: auto;
-            right: auto;
-         }
+      margin: {
+         left: auto;
+         right: auto;
+      }
 
-         @include atMedium {
-            width: 250px;
-         }
+      @include atMedium {
+         width: 250px;
+      }
 
-         @include atLarge {
-            width: 200px;
-         }
+      @include atLarge {
+         width: 200px;
       }
    }
 
