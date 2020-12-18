@@ -11,7 +11,7 @@ block content
                   "Den's Dent" - это сеть семейных клиник, ориентированных на высокотехнологичные методы лечения, имплантации и протезирования зубов
                .hero__ad-btn-block
                   a#hero-book-btn.hero__book-btn.btn(href='#book-appointment-section') Записаться на прием
-                  a.hero__price-btn.btn Узнать цены
+                  a.hero__price-btn.btn(href='/') Узнать цены
    section.offers-section.page-section
       .wrapper
          .heading-block
@@ -23,8 +23,9 @@ block content
                      each offer, index in offers
                         .glide__slide
                            a.offers-section__special-offer(
-                              class=`offers-section__special-offer--${index}`
-                           )
+                              class=`offers-section__special-offer--${index}`,
+                              href='/'
+                           ) 
                               .offers-section__offer-image-wrapper
                                  picture
                                     source(
@@ -57,13 +58,13 @@ block content
                each service in servicesList
                   .row__col-smallest-12.row__col-S-6.row__col-L-4
                      .services-section__service-item
-                        a.services-section__service-item-content
+                        a.services-section__service-item-content(href='/')
                            .services-section__service-icon(
                               style=`background-image: url("./assets/images/services/${service.alias}.svg");`
                            )
                            .services-section__service-title= service.title
          .services-section__full-list-btn-block
-            a.btn.services-section__details-btn Подробный список услуг
+            a.btn.services-section__details-btn(href='/') Подробный список услуг
    section.about-us-section.page-section
       .wrapper
          .about-us-section__content 
@@ -114,11 +115,11 @@ block content
                                        alt='Портрет врача'
                                     )
                               .team-section__member-content
-                                 .team-section__member-fullname: a #[span.team-section__member-surname= member.surName] #[span.team-section__name-n-patronymic= member.namePatronymic]
+                                 .team-section__member-fullname: a(href='/') #[span.team-section__member-surname= member.surName] #[span.team-section__name-n-patronymic= member.namePatronymic]
                                  .team-section__member-descr= member.descr
                                  .team-section__member-experience #[span Стаж:] #{member.experience}
                               .team-section__show-details-block 
-                                 a.team-section__details-btn.btn Подробнее о враче
+                                 a.team-section__details-btn.btn(href='/') Подробнее о враче
                .glide__arrows(data-glide-el='controls')
                   button.glide__arrow.glide__arrow--left(data-glide-dir='<') #[i.fas.fa-chevron-left]
                   button.glide__arrow.glide__arrow--right(data-glide-dir='>') #[i.fas.fa-chevron-right]

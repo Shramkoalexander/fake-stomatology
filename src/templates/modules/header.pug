@@ -35,9 +35,9 @@ header.header.header--is-visible
                   ul.main-menu
                      each item in navLinks
                         if (item.hasSubMenu)
-                           li.main-menu__item(id=`menu-${item.id}`): a #{item.link}#[i.fas.fa-sort-down.main-menu__submenu-icon]
+                           li.main-menu__item(id=`menu-${item.id}`): a(href='/') #{item.link}#[i.fas.fa-sort-down.main-menu__submenu-icon]
                         else
-                           li.main-menu__item: a= item.link
+                           li.main-menu__item: a(href='/')= item.link
             .row__col-smallest-none.row__col-XL-2
                .header__navbar-clbk-block: button.btn.callback-btn= callbackBtnText
 .header-menu-dropdown
@@ -46,10 +46,10 @@ header.header.header--is-visible
          each field in servicesList
             .row__col-smallest-12.row__col-M-6.row__col-L-4
                .header-menu-dropdown__content
-                  h1.header-menu-dropdown__field-title: a= field.title
+                  h1.header-menu-dropdown__field-title: a(href='/')= field.title
                   ul.header-menu-dropdown__field-list
                      each service in field.items
-                        li.header-menu-dropdown__field-item: a= service
+                        li.header-menu-dropdown__field-item: a(href='/')= service
 .mobile-nav
    ul.mobile-nav__menu
       each item in navLinks
@@ -58,10 +58,10 @@ header.header.header--is-visible
                a #{item.link}#[i.fas.fa-angle-down.mobile-nav__arrow-icon]
                ul.mobile-nav__submenu 
                   each field in item.submenu
-                     li.mobile-nav__submenu-field  #[a #{field.title}]
+                     li.mobile-nav__submenu-field  #[a(href='/') #{field.title}]
                         ul.mobile-nav__submenu-field-list
                            each fieldItem in field.items
-                              li.mobile-nav__submenu-field-item: a #{fieldItem}
+                              li.mobile-nav__submenu-field-item: a(href='/') #{fieldItem}
          else
-            li.mobile-nav__menu-item: a= item.link
+            li.mobile-nav__menu-item: a(href='/')= item.link
       button.mobile-nav__close
