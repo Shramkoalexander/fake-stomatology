@@ -14,27 +14,10 @@ function cleanTemp() {
    return del(['./.tmp']);
 }
 
-function fontawesome() {
-   return gulp
-      .src('./node_modules/@fortawesome/fontawesome-free/webfonts/**/*')
-      .pipe(gulp.dest('./src/assets/fonts/fontawesome/webfonts'));
-}
-
-function fonts() {
-   return gulp
-      .src('./src/assets/fonts/**/*')
-      .pipe(gulp.dest('./.tmp/assets/fonts'));
-}
-
 function images() {
    return gulp
       .src('./src/assets/images/**/*')
       .pipe(gulp.dest('./.tmp/assets/images'));
-}
-
-function vendors(cb) {
-   fontawesome();
-   cb();
 }
 
 function styles() {
@@ -101,13 +84,12 @@ function watch(cb) {
    );
    cb();
 }
-exports.vendors = vendors;
+
 exports.styles = styles;
 exports.watch = watch;
 exports.start = gulp.series(
    cleanTemp,
    watch,
-   fonts,
    images,
    styles,
    cssInject,
